@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="ta-en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://saasgold.in/" />
+  <title>SaaSGold | Smart Gold Chit Management Software & Jewellery ERP Solution</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="icon" type="image/jpeg" href="assets//favicon.jpg" />
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #fff8e1;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .banner-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .hero-video-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      max-height: 720px;
+      min-height: 220px;
+      overflow: hidden;
+    }
+
+    @media (max-width: 991px) {
+      .hero-video-wrapper {
+        aspect-ratio: 16/9;
+        min-height: 180px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .hero-video-wrapper {
+        aspect-ratio: 16/9;
+        min-height: 120px;
+        height: auto;
+      }
+
+      .banner-video {
+        object-fit: cover;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .hero-video-wrapper {
+        aspect-ratio: 16/9;
+        min-height: 80px;
+      }
+    }
+
+    /* Floating Enquiry Form */
+    .floating-enquiry {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 1000;
+    }
+
+    .enquiry-toggle {
+      width: 60px;
+      height: 60px;
+      background: #b22517;
+      border: none;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 24px;
+      box-shadow: 0 4px 20px rgba(178, 37, 23, 0.3);
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+
+    .enquiry-toggle:hover {
+      background: #9b2114;
+      transform: scale(1.1);
+    }
+
+    .enquiry-form {
+      position: fixed;
+      top: 0;
+      right: -400px;
+      width: 400px;
+      height: 100vh;
+      background: #fff;
+      box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+      transition: right 0.3s ease;
+      z-index: 1001;
+      overflow-y: auto;
+    }
+
+    .enquiry-form.open {
+      right: 0;
+    }
+
+    .enquiry-header {
+      background: #b22517;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .enquiry-header h3 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .enquiry-close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .enquiry-body {
+      padding: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: border-color 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: #b22517;
+    }
+
+    .enquiry-submit {
+      width: 100%;
+      background: #b22517;
+      color: #fff;
+      border: none;
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .enquiry-submit:hover {
+      background: #9b2114;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+    }
+
+    .overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    @media (max-width: 768px) {
+      .enquiry-form {
+        width: 100%;
+        right: -100%;
+      }
+
+      .floating-enquiry {
+        bottom: 20px;
+        right: 20px;
+      }
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, #b22517 80%, #ffe082 100%);
+      padding: 60px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+
+    .cta-card {
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 8px 32px 0 rgba(191, 33, 23, 0.10);
+      padding: 48px 32px 40px 32px;
+      max-width: 540px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+    }
+
+    .cta-icon {
+      background: #ffe082;
+      color: #b22517;
+      border-radius: 50%;
+      width: 64px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      margin: 0 auto 18px auto;
+      box-shadow: 0 2px 8px 0 rgba(191, 161, 74, 0.10);
+    }
+
+    .cta-card h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #b22517;
+      margin-bottom: 12px;
+    }
+
+    .cta-card p {
+      color: #7c6f3a;
+      font-size: 1.15rem;
+      margin-bottom: 32px;
+    }
+
+    .cta-btn-animate {
+      animation: ctaPulse 1.5s infinite alternate;
+      font-size: 1.2rem;
+      font-weight: 600;
+      background: #ffe082;
+      color: #b22517;
+      border: none;
+      border-radius: 8px;
+      padding: 14px 36px;
+      box-shadow: 0 4px 16px 0 rgba(191, 161, 74, 0.10);
+      transition: background 0.2s;
+    }
+
+    .cta-btn-animate:hover {
+      background: #bfa14a;
+      color: #fff;
+    }
+
+    @keyframes ctaPulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(191, 161, 74, 0.18);
+      }
+
+      100% {
+        box-shadow: 0 0 0 12px rgba(191, 161, 74, 0.04);
+      }
+    }
+
+    .screenshots-section {
+      background: linear-gradient(135deg, #fff8e1 70%, #ffe082 100%);
+      padding: 60px 0 40px 0;
+    }
+
+    .screenshots-heading {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #b22517;
+      margin-bottom: 10px;
+    }
+
+    .screenshots-subtitle {
+      color: #7c6f3a;
+      font-size: 1.1rem;
+      margin-bottom: 36px;
+    }
+
+    .mockup-mobile {
+      background: #222;
+      border-radius: 32px;
+      box-shadow: 0 8px 32px 0 rgba(191, 161, 74, 0.13);
+      padding: 18px 8px 12px 8px;
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      max-width: 320px;
+      min-height: 600px;
+      margin: 0 auto;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    /* .mockup-mobile:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 16px 48px 0 rgba(191,161,74,0.18);
+    } */
+    .mockup-notch {
+      width: 80px;
+      height: 10px;
+      background: #333;
+      border-radius: 0 0 12px 12px;
+      position: absolute;
+      top: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+
+    .mockup-img {
+      border-radius: 24px;
+      width: 100%;
+      height: 580px;
+      object-fit: fill;
+      box-shadow: 0 2px 8px 0 rgba(191, 161, 74, 0.10);
+      background: #fff;
+    }
+
+    @media (max-width: 991px) {
+      .mockup-mobile {
+        min-height: 420px;
+        max-width: 220px;
+      }
+
+      .mockup-img {
+        height: 380px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .mockup-mobile {
+        min-height: 600px;
+        max-width: 90vw;
+      }
+
+      .mockup-img {
+        height: 600px;
+      }
+    }
+
+    .about-section-bg {
+      background: linear-gradient(135deg, #fffbe7 70%, #ffe082 100%);
+      padding: 60px 0 10px 0;
+    }
+
+    .about-card,
+    .services-card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 32px 0 rgba(191, 161, 74, 0.10);
+      padding: 36px 28px 28px 28px;
+      border-left: 6px solid #b22517;
+    }
+
+    .jnana-logo {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 18px;
+      display: block;
+    }
+
+    .about-title {
+      color: #209ad2;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .about-desc {
+      color: #7c6f3a;
+      font-size: 1.13rem;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 991px) {
+
+      .about-card,
+      .services-card {
+        padding: 24px 12px;
+      }
+    }
+
+    .services-card-list {
+      background: transparent;
+      box-shadow: none;
+      border: none;
+      padding: 0;
+    }
+
+    .service-feature-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px 0 rgba(191, 161, 74, 0.10);
+      border: 2px solid #ffe082;
+      padding: 28px 18px 22px 18px;
+      margin-bottom: 24px;
+      text-align: center;
+      transition: transform 0.18s, box-shadow 0.18s;
+      min-height: 170px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .service-feature-card:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 8px 32px 0 rgba(191, 161, 74, 0.18);
+      border-color: #bfa14a;
+    }
+
+    .service-feature-icon {
+      font-size: 2.1rem;
+      color: #bfa14a;
+      margin-bottom: 10px;
+    }
+
+    .service-feature-title {
+      font-weight: 600;
+      color: #b22517;
+      font-size: 1.08rem;
+    }
+
+    .services-section-title {
+      color: #b22517;
+      font-weight: 700;
+      font-size: 1.35rem;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .services-section-title:after {
+      content: '';
+      display: inline-block;
+      width: 48px;
+      height: 4px;
+      background: #bfa14a;
+      border-radius: 2px;
+      margin-left: 14px;
+    }
+  </style>
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Cloud-based ERP for jewellery and gold chit businesses. SaaSGold offers branded apps, CRM and full security. Book your demo free">
+  <meta name="keywords"
+    content="Gold Chit Management, Jewellery ERP, Chit Fund Software, SaaS for Jewellery, Digital Chit App, Jewellery CRM, Business Analytics, Retail Mobile App, E-commerce for Jewellery, Gold Savings, Chit App India, Jewellery Software Chennai, Secure Cloud ERP, Customer Engagement, Business Automation, Free Demo, SAASGOLD, Jnana Inventive">
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4FR61JZPL1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-4FR61JZPL1');
+  </script>
+</head>
+
+<body>
+
+  <!-- header -->
+  <div id="header-placeholder"></div>
+
+
+  <section class="hero text-center" id="home"
+    style="background: #f9e381; color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 0; min-height: 320px;">
+    <div class="hero-video-wrapper">
+      <video autoplay muted loop playsinline class="banner-video">
+        <source src="assets/Saasgold -banner.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <section class="features container-fluid py-5"
+    style="background: linear-gradient(135deg, #fff8e1 70%, #ffe082 100%);">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 style="font-size: 2.5rem; font-weight: 700; color: #b22517; letter-spacing: 1px;" id="demo-en">Why Choose
+          <span style='color:#bfa14a;'>SaaSGold?</span>
+        </h2>
+        <h2 style="font-size: 2.5rem; font-weight: 700; color: #b22517; letter-spacing: 1px;" id="demo-ta">ஏன் <span
+            style='color:#bfa14a;'>SaaSGold?</span> தேர்வு செய்ய வேண்டும்?</h2>
+        <p style="font-size: 1.2rem; color: #7c6f3a; max-width: 600px; margin: 0 auto;" id="demo-en">Empower your
+          jewellery business with our smart, secure, and easy-to-use gold chit management platform.</p>
+
+        <p style="font-size: 1.2rem; color: #7c6f3a; max-width: 600px; margin: 0 auto;" id="demo-ta">நவீன, பாதுகாப்பான
+          மற்றும் எளிதாக பயன்படுத்தக்கூடிய நகை சிட் நிர்வாக தளத்தின் மூலம் உங்கள் நகை வணிகத்தை வலுப்படுத்துங்கள்.</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-4">
+          <div class="feature-box card h-100 shadow-sm border-0" style="border-radius: 18px; background: #fff;">
+            <div class="card-body text-center">
+              <div style="font-size: 2.5rem; color: #b22517; margin-bottom: 10px;">📱</div>
+              <h4 id="f1-en" style="color: #b22517;">Branded Mobile App</h4>
+              <h4 id="f1-ta" class="hidden" style="color: #b22517;">தனிப்பயனாக்கப்பட்ட மொபைல் ஆப்</h4>
+              <p id="ft1-en">Customers can view chit details, make payments, and receive alerts.</p>
+              <p id="ft1-ta" class="hidden">வாடிக்கையாளர்கள் சிட் விவரங்களை பார்க்கலாம், கட்டணங்களை செலுத்தலாம்,
+                அறிவிப்புகளை பெறலாம்.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="feature-box card h-100 shadow-sm border-0" style="border-radius: 18px; background: #fff;">
+            <div class="card-body text-center">
+              <div style="font-size: 2.5rem; color: #b22517; margin-bottom: 10px;">💰</div>
+              <h4 id="f2-en" style="color: #b22517;">Easy Chit Management</h4>
+              <h4 id="f2-ta" class="hidden" style="color: #b22517;">சுலப சிட் மேலாண்மை</h4>
+              <p id="ft2-en">Track chit payments, due dates, and customer records easily.</p>
+              <p id="ft2-ta" class="hidden">சிட் கட்டணங்கள், கடைசி தேதிகள் மற்றும் வாடிக்கையாளர் விவரங்களை
+                கண்காணிக்கலாம்.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="feature-box card h-100 shadow-sm border-0" style="border-radius: 18px; background: #fff;">
+            <div class="card-body text-center">
+              <div style="font-size: 2.5rem; color: #b22517; margin-bottom: 10px;">🤝</div>
+              <h4 id="f4-en" style="color: #b22517;">Refer & Earn</h4>
+              <h4 id="f4-ta" class="hidden" style="color: #b22517;">பரிந்துரையிடுங்கள், வருமானம் பெறுங்கள்</h4>
+              <p id="ft4-en">Encourage customers to refer others and earn rewards on successful joins.</p>
+              <p id="ft4-ta" class="hidden">புதிய வாடிக்கையாளர்களை பரிந்துரைக்க வாடிக்கையாளர்களை ஊக்குவிக்கவும் மற்றும்
+                வெற்றிகரமாக சேரும்போது பரிசுகளை வழங்கவும்.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="feature-box card h-100 shadow-sm border-0" style="border-radius: 18px; background: #fff;">
+            <div class="card-body text-center">
+              <div style="font-size: 2.5rem; color: #b22517; margin-bottom: 10px;">🏆</div>
+              <h4 id="f5-en" style="color: #b22517;">Reward for Timely Payments</h4>
+              <h4 id="f5-ta" class="hidden" style="color: #b22517;">காலத்திற்குள் கட்டணம் செலுத்தினால் பரிசு</h4>
+              <p id="ft5-en">Customers who pay before the due date can earn reward points.</p>
+              <p id="ft5-ta" class="hidden">கடந்த தேதி முன் கட்டணம் செலுத்தும் வாடிக்கையாளர்களுக்கு ரிவார்டு பாயிண்ட்
+                வழங்கப்படுகிறது.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="feature-box card h-100 shadow-sm border-0" style="border-radius: 18px; background: #fff;">
+            <div class="card-body text-center">
+              <div style="font-size: 2.5rem; color: #b22517; margin-bottom: 10px;">📞</div>
+              <h4 id="f6-en" style="color: #b22517;">Your Customer in Your Hand</h4>
+              <h4 id="f6-ta" class="hidden" style="color: #b22517;">உங்கள் வாடிக்கையாளர் உங்கள் கையில்</h4>
+              <p id="ft6-en">Stay connected with your customers anytime via your branded app.</p>
+              <p id="ft6-ta" class="hidden">உங்கள் பிராண்டட் ஆப்பின் மூலம் எப்போதும் உங்கள் வாடிக்கையாளர்களுடன்
+                தொடர்பில் இருங்கள்.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="feature-box card h-100 shadow-sm border-0" style="border-radius: 18px; background: #fff;">
+            <div class="card-body text-center">
+              <div style="font-size: 2.5rem; color: #b22517; margin-bottom: 10px;">🔒</div>
+              <h4 id="f3-en" style="color: #b22517;">Secure & Reliable</h4>
+              <h4 id="f3-ta" class="hidden" style="color: #b22517;">பாதுகாப்பான மற்றும் நம்பகமானது</h4>
+              <p id="ft3-en">Data securely stored in the cloud with 24/7 access.</p>
+              <p id="ft3-ta" class="hidden">மேகத்தில் பாதுகாப்பாக சேமிக்கப்பட்ட தரவுகள் 24/7 அணுகலுடன்.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="animate__animated animate__fadeInUp text-center">
+
+      <h2 id="ct-en">Go Digital. Grow Your Business.</h2>
+      <h2 id="ct-ta" class="hidden">டிஜிட்டல் ஆகுங்கள். உங்கள் வணிகத்தை வளர்த்தெடுக்குங்கள்.</h2>
+      <p id="ctdesc-en">Offer your customers a modern mobile experience and manage your gold chit business with ease and
+        security.</p>
+      <p id="ctdesc-ta" class="hidden">வாடிக்கையாளர்களுக்கு நவீன மொபைல் அனுபவத்தை வழங்குங்கள் மற்றும் உங்கள் நகை சிட்
+        வணிகத்தை எளிதாகவும் பாதுகாப்பாகவும் நிர்வகிக்கவும்.</p>
+      <a href="contact.html" class="cta-btn-animate mt-3 btn" id="demo-en">Free Demo</a>
+      <a href="contact.html" class="cta-btn-animate mt-3 btn hidden" id="demo-ta">டெமோவைக் பெறுங்கள்</a>
+    </div>
+  </section>
+
+  <section class="screenshots-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <div class="screenshots-heading" id="demo-en">Your Chit Business, Digitized</div>
+        <div class="screenshots-heading" id="demo-ta">உங்கள் சிட் வணிகம், இப்போது டிஜிட்டல் வடிவத்தில்</div>
+        <div class="screenshots-subtitle" id="demo-en">Experience the modern, intuitive interface of our gold chit
+          management app.</div>
+
+        <div class="screenshots-subtitle" id="demo-ta">நவீன, புரிந்திரமான இடைமுகத்தை அனுபவிக்கவும்.</div>
+      </div>
+      <div class="owl-carousel owl-theme mt-4">
+        <div class="item">
+          <div class="mockup-mobile">
+            <div class="mockup-notch"></div>
+            <img src="assets/s1.jpg" class="mockup-img" alt="Screenshot 1">
+          </div>
+        </div>
+        <div class="item">
+          <div class="mockup-mobile">
+            <div class="mockup-notch"></div>
+            <img src="assets/s2.jpg" class="mockup-img" alt="Screenshot 2">
+          </div>
+        </div>
+        <div class="item">
+          <div class="mockup-mobile">
+            <div class="mockup-notch"></div>
+            <img src="assets/s3.jpg" class="mockup-img" alt="Screenshot 3">
+          </div>
+        </div>
+        <div class="item">
+          <div class="mockup-mobile">
+            <div class="mockup-notch"></div>
+            <img src="assets/s4.jpg" class="mockup-img" alt="Screenshot 4">
+          </div>
+        </div>
+        <div class="item">
+          <div class="mockup-mobile">
+            <div class="mockup-notch"></div>
+            <img src="assets/new-S5.png" class="mockup-img" alt="Screenshot 5">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section-bg" id="about">
+    <div class="container">
+      <div class="row align-items-stretch justify-content-center">
+        <div class="col-lg-5 mb-4 animate__animated animate__fadeInLeft">
+          <div class="about-card h-100">
+            <img class="jnana-logo" src="assets/logo.png">
+            <div class="about-title"><span style="color: #b22517;">About</span> Jnana Inventive</div>
+            <p class="about-desc" id="demo-en"><strong>Jnana Inventive</strong> is a tech-forward company focused on
+              digital innovation. SaaSGold is proudly developed and maintained by Jnana Inventive to help jewellery
+              businesses manage their gold chit operations efficiently.</p>
+            <p class="about-desc" id="demo-ta"><em>ஜ்ஞான இன்வென்டிவ்</em> என்பது டிஜிட்டல் புதுமையை முன்னிறுத்தும்
+              தொழில்நுட்ப நிறுவனம். நகை வணிகங்களுக்காக <strong>SaaSGold</strong> ஐ உருவாக்கியது ஜ்ஞான இன்வென்டிவ்.</p>
+          </div>
+        </div>
+        <div class="col-lg-7 mb-4 animate__animated animate__fadeInRight">
+          <div class="services-card services-card-list h-100">
+            <div class="services-section-title">Other Services by <span style="color: #209ad2;" class="ms-1"> Jnana
+                Inventive</span></div>
+            <div class="row">
+              <div class="col-md-4 col-sm-6 mb-4 animate__animated animate__fadeInUp">
+                <div class="service-feature-card">
+                  <div class="service-feature-icon">💎</div>
+                  <div class="service-feature-title">Custom ERP Solutions</div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6 mb-4 animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="service-feature-card">
+                  <div class="service-feature-icon">🛒</div>
+                  <div class="service-feature-title">E-commerce Platforms for Retail Stores</div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6 mb-4 animate__animated animate__fadeInUp animate__delay-2s">
+                <div class="service-feature-card">
+                  <div class="service-feature-icon">📱</div>
+                  <div class="service-feature-title">Branded Mobile Apps for Retailers</div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6 mb-4 animate__animated animate__fadeInUp animate__delay-3s">
+                <div class="service-feature-card">
+                  <div class="service-feature-icon">📊</div>
+                  <div class="service-feature-title">Business Analytics & Reporting Tools</div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6 mb-4 animate__animated animate__fadeInUp animate__delay-4s">
+                <div class="service-feature-card">
+                  <div class="service-feature-icon">🔗</div>
+                  <div class="service-feature-title">CRM & Customer Engagement Solutions</div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6 mb-4 animate__animated animate__fadeInUp animate__delay-5s">
+                <div class="service-feature-card">
+                  <div class="service-feature-icon">🌐</div>
+                  <div class="service-feature-title">Website Design & Digital Marketing</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer-section -->
+  <div id="placeholders-for-footer"></div>
+
+  <!-- Floating Enquiry Form -->
+  <div class="floating-enquiry">
+    <button class="enquiry-toggle" onclick="toggleEnquiry()">
+      <img src="assets/call.png">
+    </button>
+  </div>
+
+  <div class="overlay" id="overlay" onclick="closeEnquiry()"></div>
+
+  <div class="enquiry-form" id="enquiryForm">
+    <div class="enquiry-header">
+      <h3>Get Free Demo</h3>
+      <button class="enquiry-close" onclick="closeEnquiry()">×</button>
+    </div>
+    <div class="enquiry-body">
+      <form id="enquiryFormData">
+        <div class="form-group">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" name="name" maxlength="30" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number *</label>
+          <input type="tel" id="phone" name="phone" maxlength="10" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" maxlength="50">
+        </div>
+        <div class="form-group">
+          <label for="business">Business Name</label>
+          <input type="text" id="business" name="business" maxlength="20">
+        </div>
+        <div class="form-group">
+          <label for="location">Location</label>
+          <input type="text" id="location" name="location" maxlength="20" placeholder="City, State">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell us about your requirements..."></textarea>
+        </div>
+        <button type="submit" class="enquiry-submit">Send Enquiry</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Owl Carousel JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!-- customize JS -->
+  <script src="assets/js/script.js"></script>
+
+  <script src="https://backend.saasgold.in/public/saasgold-chat-embed.js"></script>
+  <!-- Optional: Configure the widget -->
+  <script>
+    // Configure the SaaSGOLD AI Chat Widget
+    window.SAASGOLD_CONFIG = {
+      apiUrl: 'https://backend.saasgold.in/api/ai-chat', // Replace with your actual backend URL
+      companyId: 0, // Replace with your company ID
+      position: 'bottom-right',
+      theme: 'light',
+      branding: {
+        name: 'Jewellery Store AI',
+        subtitle: 'Ask about our jewellery and chit funds! :gem:',
+        logo: 'https://your-logo.png' // Replace with your logo
+      },
+      welcomeMessage: {
+        title: ':wave: Welcome to Jewellery Store!',
+        content: 'I\'m your AI assistant here to help you learn about our jewellery and chit fund services. Ask me anything about our products, pricing, or chit fund options!'
+      }
+    };
+    // Example: Programmatic control
+    function openChat() {
+      window.SaaSGOLD.openChat();
+    }
+    function sendWelcomeMessage() {
+      window.SaaSGOLD.sendMessage('Hi, I\'m interested in your chit fund services');
+    }
+    // Example: Auto-open chat after 5 seconds (optional)
+    // setTimeout(() => window.SaaSGOLD.openChat(), 5000);
+  </script>
+
+</body>
+
+</html>
