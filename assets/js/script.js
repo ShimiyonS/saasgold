@@ -124,32 +124,42 @@ document.getElementById('enquiryFormData').addEventListener('submit', async func
         return;
     }
 
+
     // Prepare required fields for API
-    const payload = new URLSearchParams({
-        mobile: data.phone || '',
+    const payload ={
+        mobile: "+91" + data.phone || '',
         message: data.message || '',
         business_name: data.business || '',
         name: data.name || '',
         lead_from: 'website',
-        created_by: '0',
-        lead_owner: '0',
+        created_by: '1',
+        lead_owner: '1',
         user_agent: navigator.userAgent,
         status: '0',
         remarks: '',
         lead_status: '',
         location: data.location || '',
         email: data.email || ''
-    });
+    };
+
 
     try {
-        const response = await fetch('https://backend.saasgold.in/api/demo-requests', {
+
+        // Submit to Google Sheet (CORS workaround using no-cors)
+        await fetch("https://script.google.com/macros/s/AKfycbzp3qnwax9cuS7nS8D-5RggcRgvJ07l5nuWtzImeSuMeieXLsDTwUl6ocms4mmwPBSFTA/exec", {
+            method: 'POST',
+            mode: 'no-cors', // Prevents CORS error, but you can't read response
+            body: formData
+        });
+        const response = await fetch('http://localhost:8080/api/demo-requests', {
             method: 'POST',
             headers: {
-                'accept': 'application/json',
-                'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiY29tcGFueV9pZCI6MCwiaXNfYWRtaW4iOjAsImJyYW5jaF9pZCI6bnVsbCwiaWF0IjoxNzUxNjI2NjUwLCJleHAiOjE3NTIyMzE0NTB9.7SbQiGgV0raYZmcy3PVaULFtctEvwrn_Q2XcE71nDTs',
-                'Content-Type': 'application/x-www-form-urlencoded'
+                'Content-Type': 'application/json',
+                'x-api-key': 'sk_1a2b805b51eea9954044ec7b512761cd21d195d37b96a799c337ecd4890f4487',
+                'Accept': 'application/json'
             },
-            body: payload.toString()
+            body: JSON.stringify(payload)
+
         });
         if (response.ok) {
             alert('Thank you for your enquiry! We will contact you soon.');

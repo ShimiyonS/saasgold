@@ -679,7 +679,8 @@
         </div>
         <div class="col-lg-7 mb-4 animate__animated animate__fadeInRight">
           <div class="services-card services-card-list h-100">
-            <div class="services-section-title">Other Services by <span style="color: #209ad2;" class="ms-1"> Jnana Inventive</span></div>
+            <div class="services-section-title">Other Services by <span style="color: #209ad2;" class="ms-1"> Jnana
+                Inventive</span></div>
             <div class="row">
               <div class="col-md-4 col-sm-6 mb-4 animate__animated animate__fadeInUp">
                 <div class="service-feature-card">
@@ -780,6 +781,36 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <!-- customize JS -->
   <script src="assets/js/script.js"></script>
+
+  <script src="https://backend.saasgold.in/public/saasgold-chat-embed.js"></script>
+  <!-- Optional: Configure the widget -->
+  <script>
+    // Configure the SaaSGOLD AI Chat Widget
+    window.SAASGOLD_CONFIG = {
+      apiUrl: 'https://backend.saasgold.in/api/ai-chat', // Replace with your actual backend URL
+      companyId: 0, // Replace with your company ID
+      position: 'bottom-right',
+      theme: 'light',
+      branding: {
+        name: 'Jewellery Store AI',
+        subtitle: 'Ask about our jewellery and chit funds! :gem:',
+        logo: 'https://your-logo.png' // Replace with your logo
+      },
+      welcomeMessage: {
+        title: ':wave: Welcome to Jewellery Store!',
+        content: 'I\'m your AI assistant here to help you learn about our jewellery and chit fund services. Ask me anything about our products, pricing, or chit fund options!'
+      }
+    };
+    // Example: Programmatic control
+    function openChat() {
+      window.SaaSGOLD.openChat();
+    }
+    function sendWelcomeMessage() {
+      window.SaaSGOLD.sendMessage('Hi, I\'m interested in your chit fund services');
+    }
+    // Example: Auto-open chat after 5 seconds (optional)
+    // setTimeout(() => window.SaaSGOLD.openChat(), 5000);
+  </script>
 
 </body>
 
