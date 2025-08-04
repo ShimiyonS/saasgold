@@ -19,13 +19,13 @@
       padding: 0;
       height: 100%;
       width: 100%;
-      overflow-x: hidden;
       scroll-behavior: smooth;
     }
 
     body {
       background-color: #fff8e1;
       font-family: 'Segoe UI', sans-serif;
+      padding-top: 68px;
     }
 
     .banner-video {
@@ -364,7 +364,7 @@
     @media (max-width: 767px) {
       .mockup-mobile {
         min-height: 600px;
-        max-width: 90vw;
+        max-width: 75vw;
       }
 
       .mockup-img {
@@ -387,8 +387,8 @@
     }
 
     .jnana-logo {
-      width: 150px;
-      height: 150px;
+      width: 130px;
+      height: 130px;
       margin-bottom: 18px;
       display: block;
     }
@@ -474,6 +474,12 @@
       border-radius: 2px;
       margin-left: 14px;
     }
+
+    @media (max-width: 767px) {
+      .services-section-title {
+        font-size: 1.10rem;
+      }
+    }
   </style>
   <!-- SEO Meta Tags -->
   <meta name="description"
@@ -505,7 +511,7 @@
   <section class="hero text-center" id="home"
     style="background: #f9e381; color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 0; min-height: 320px;">
     <div class="hero-video-wrapper">
-      <video autoplay muted loop playsinline class="banner-video">
+      <video autoplay muted loop playsinline class="banner-video" style="width: 100%;">
         <source src="assets/Saasgold -banner.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
@@ -605,7 +611,7 @@
   </section>
 
   <section class="cta-section">
-    <div class="animate__animated animate__fadeInUp text-center">
+    <div class="animate__animated animate__fadeInUp text-center p-2 p-lg-0">
 
       <h2 id="ct-en">Go Digital. Grow Your Business.</h2>
       <h2 id="ct-ta" class="hidden">டிஜிட்டல் ஆகுங்கள். உங்கள் வணிகத்தை வளர்த்தெடுக்குங்கள்.</h2>
@@ -629,31 +635,31 @@
         <div class="screenshots-subtitle" id="demo-ta">நவீன, புரிந்திரமான இடைமுகத்தை அனுபவிக்கவும்.</div>
       </div>
       <div class="owl-carousel owl-theme mt-4">
-        <div class="item">
+        <div class="item d-flex">
           <div class="mockup-mobile">
             <div class="mockup-notch"></div>
             <img src="assets/s1.jpg" class="mockup-img" alt="Screenshot 1">
           </div>
         </div>
-        <div class="item">
+        <div class="item d-flex">
           <div class="mockup-mobile">
             <div class="mockup-notch"></div>
             <img src="assets/s2.jpg" class="mockup-img" alt="Screenshot 2">
           </div>
         </div>
-        <div class="item">
+        <div class="item d-flex">
           <div class="mockup-mobile">
             <div class="mockup-notch"></div>
             <img src="assets/s3.jpg" class="mockup-img" alt="Screenshot 3">
           </div>
         </div>
-        <div class="item">
+        <div class="item d-flex">
           <div class="mockup-mobile">
             <div class="mockup-notch"></div>
             <img src="assets/s4.jpg" class="mockup-img" alt="Screenshot 4">
           </div>
         </div>
-        <div class="item">
+        <div class="item d-flex">
           <div class="mockup-mobile">
             <div class="mockup-notch"></div>
             <img src="assets/new-S5.png" class="mockup-img" alt="Screenshot 5">
@@ -666,7 +672,7 @@
   <section class="about-section-bg" id="about">
     <div class="container">
       <div class="row align-items-stretch justify-content-center">
-        <div class="col-lg-5 mb-4 animate__animated animate__fadeInLeft">
+        <div class="col-lg-5 mb-4">
           <div class="about-card h-100">
             <img class="jnana-logo" src="assets/logo.png">
             <div class="about-title"><span style="color: #b22517;">About</span> Jnana Inventive</div>
@@ -677,7 +683,7 @@
               தொழில்நுட்ப நிறுவனம். நகை வணிகங்களுக்காக <strong>SaaSGold</strong> ஐ உருவாக்கியது ஜ்ஞான இன்வென்டிவ்.</p>
           </div>
         </div>
-        <div class="col-lg-7 mb-4 animate__animated animate__fadeInRight">
+        <div class="col-lg-7 mb-4">
           <div class="services-card services-card-list h-100">
             <div class="services-section-title">Other Services by <span style="color: #209ad2;" class="ms-1"> Jnana
                 Inventive</span></div>
@@ -774,6 +780,7 @@
   </div>
 
   <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <!-- jQuery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
