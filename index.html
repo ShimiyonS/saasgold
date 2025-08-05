@@ -83,14 +83,17 @@
     .enquiry-toggle {
       width: 60px;
       height: 60px;
-      background: #b22517;
-      border: none;
+      background: linear-gradient(135deg, #b22517 0%, #ffd66e 100%);
       border-radius: 50%;
-      color: #fff;
-      font-size: 24px;
-      box-shadow: 0 4px 20px rgba(178, 37, 23, 0.3);
-      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       cursor: pointer;
+      box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
+      transition: all 0.3s ease;
+      position: relative;
+      border: none;
+      outline: none;
     }
 
     .enquiry-toggle:hover {
@@ -214,7 +217,7 @@
 
       .floating-enquiry {
         bottom: 20px;
-        right: 20px;
+        right: 23px;
       }
     }
 
@@ -430,7 +433,7 @@
       margin-bottom: 24px;
       text-align: center;
       transition: transform 0.18s, box-shadow 0.18s;
-      min-height: 170px;
+      min-height: 220px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -458,7 +461,7 @@
     .services-section-title {
       color: #b22517;
       font-weight: 700;
-      font-size: 1.35rem;
+      font-size: 1.75rem;
       margin-bottom: 18px;
       display: flex;
       align-items: center;
@@ -475,9 +478,47 @@
       margin-left: 14px;
     }
 
-    @media (max-width: 767px) {
+    .saasgold-chat-widget {
+      bottom: 105px !important;
+      right: 30px !important;
+    }
+
+    .saasgold-user-form-container {
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
+
+    @media (max-width: 768px) {
       .services-section-title {
         font-size: 1.10rem;
+      }
+
+      .saasgold-chat-widget {
+        bottom: 105px !important;
+        right: 25px !important;
+      }
+      
+    }
+
+    @media (max-width: 480px) {
+      .saasgold-chat-window {
+        width: calc(100vw - 60px) !important;
+        height: calc(100vh - 210px) !important;
+        bottom: 80px !important;
+        right: 0px !important;
+        left: auto !important;
+      }
+    }
+
+
+
+    @media (max-width: 374px) {
+      .services-section-title {
+        font-size: 1rem;
+      }
+
+      .services-section-title:after {
+        display: none;
       }
     }
   </style>
@@ -737,7 +778,7 @@
   <!-- Floating Enquiry Form -->
   <div class="floating-enquiry">
     <button class="enquiry-toggle" onclick="toggleEnquiry()">
-      <img src="assets/call.png">
+      <img src="assets/call.png" width="25" height="25">
     </button>
   </div>
 
