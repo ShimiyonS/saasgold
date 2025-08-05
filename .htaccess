@@ -1,0 +1,19 @@
+# ------------------------------------------------
+# Redirect to HTTPS and force www
+RewriteEngine On
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^(.*)$ https://www.saasgold.in/$1 [L,R=301]
+
+# ------------------------------------------------
+# Remove .html extension from URL
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^/]+)/?$ $1.html [L]
+
+# Redirect /index or /index.html to root domain
+RewriteCond %{THE_REQUEST} /index(\.html)?\s [NC]
+RewriteRule ^index(\.html)?$ / [R=301,L]
+
+# Optional: Redirect .html to clean URL (SEO-friendly)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.html\sHTTP/
+RewriteRule ^ %1 [R=301,L]
