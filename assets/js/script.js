@@ -151,11 +151,11 @@ document.getElementById('enquiryFormData').addEventListener('submit', async func
             mode: 'no-cors', // Prevents CORS error, but you can't read response
             body: formData
         });
-        const response = await fetch('http://localhost:8080/api/demo-requests', {
+        const response = await fetch('https://backend.saasgold.in/api/demo-requests', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'x-api-key': 'sk_1a2b805b51eea9954044ec7b512761cd21d195d37b96a799c337ecd4890f4487',
+                'x-api-key': 'sk_7e08d3c5f91beef967d52c94d29f5c7fb3a9bc3b8d3c7b02e513cdf1715d1fdf',
                 'Accept': 'application/json'
             },
             body: JSON.stringify(payload)
