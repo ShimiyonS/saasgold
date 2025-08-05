@@ -1,0 +1,155 @@
+body {
+    background: linear-gradient(135deg, #fff8e1 70%, #ffe082 100%);
+    padding-top: 68px;
+}
+
+.container-1200 {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container-1400 {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.color-meron {
+    color: #9b2114;
+}
+
+.color-gold {
+    color: #bfa14a;
+}
+
+.line-height {
+    line-height: 1.8;
+}
+
+.custom-accordion .accordion-item {
+    border: none;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.custom-accordion .accordion-button {
+    background-color: transparent;
+    color: #bfa14a;
+    font-weight: 500;
+    box-shadow: none;
+    border: none;
+    padding: 20px 16px;
+    font-size: 18px;
+}
+
+.custom-accordion .accordion-button::after {
+    content: '+';
+    font-size: 20px;
+    color: #bfa14a;
+    background-image: none !important;
+    transform: rotate(0deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-accordion .accordion-button:not(.collapsed)::after {
+    content: '-';
+    transform: rotate(0deg);
+}
+
+.custom-accordion .accordion-button:focus {
+    box-shadow: none;
+}
+
+.custom-accordion .accordion-body {
+    padding: 10px 15px;
+    background-color: #fff;
+    border-top: 1px solid #ffe082;
+}
+
+.scroll-container {
+    position: relative;
+    height: 100%;
+    max-height: 900px;
+}
+
+.scroll-content {
+    display: flex;
+    flex-direction: column;
+    animation: scrollUp 15s linear infinite;
+}
+
+.scroll-content img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+/* Scroll Up Animation */
+.scroll-up:hover, .scroll-down:hover{
+     animation-play-state: paused;
+}
+.scroll-up {
+    animation: scrollUp 20s linear infinite;
+    animation-play-state: running;
+}
+
+/* Scroll Down Animation */
+.scroll-down {
+    animation: scrollDown 20s linear infinite;
+    animation-play-state: running;
+}
+
+/* Keyframes */
+@keyframes scrollUp {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes scrollDown {
+    0% {
+        transform: translateY(-50%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .scroll-container {
+        max-height: 450px;
+    }
+
+    .scroll-content img {
+        height: auto;
+    }
+}
+
+
+.btn-demo {
+    animation: ctaPulse 1.5s infinite alternate;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: #ffe082;
+    color: #b22517;
+    border: none;
+    border-radius: 39px 39px 39px 39px;
+    padding: 14px 36px;
+    box-shadow: 0 4px 16px 0 rgba(191, 161, 74, 0.10);
+    transition: background 0.2s;
+}
+
+.btn-demo:hover {
+    background: #bfa14a;
+    color: #fff;
+}

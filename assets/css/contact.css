@@ -1,0 +1,86 @@
+   body {
+       background: linear-gradient(135deg, #fff8e1 70%, #ffe082 100%);
+       padding-top: 68px;
+   }
+
+   .input-container {
+       position: relative;
+       margin-top: 20px;
+       width: 100%;
+   }
+
+   .input-container input,
+   .input-container textarea {
+       width: 100%;
+       padding: 15px;
+       border: 1px solid #ccc;
+       border-radius: 4px;
+       font-size: 16px;
+       outline: none;
+   }
+
+   .input-container label {
+       position: absolute;
+       top: 12px;
+       left: 12px;
+       color: #777;
+       background: #fff;
+       padding: 0 5px;
+       transition: 0.3s ease all;
+       pointer-events: none;
+       font-size: 16px;
+   }
+
+   /* Floating effect when input focused or has value */
+   .input-container input:focus+label,
+   .input-container textarea:focus+label,
+   .input-container input:not(:placeholder-shown)+label,
+   .input-container textarea:not(:placeholder-shown)+label {
+       top: -8px;
+       left: 10px;
+       font-size: 13px;
+       color: #0d6efd;
+   }
+
+   .form-container {
+       max-width: 100%;
+       margin: 50px auto;
+       padding: 20px;
+       border: 1px solid #ddd;
+       border-radius: 8px;
+       background: #fff;
+   }
+
+   .btn-submit {
+       margin-top: 20px;
+       animation: ctaPulse 1.5s infinite alternate;
+       font-size: 1.2rem;
+       font-weight: 600;
+       background: #ffe082;
+       color: #b22517;
+       border: none;
+       border-radius: 8px;
+       padding: 14px 36px;
+       box-shadow: 0 4px 16px 0 rgba(191, 161, 74, 0.10);
+       transition: background 0.2s;
+   }
+
+   .btn-submit:hover {
+       background: #bfa14a;
+       color: #fff;
+   }
+
+   /* Autofill background fix */
+   input:-webkit-autofill {
+       -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
+       box-shadow: 0 0 0px 1000px #fff inset !important;
+       -webkit-text-fill-color: #000 !important;
+       background-color: #fff !important;
+       transition: background-color 5000s ease-in-out 0s;
+   }
+
+   /* To handle focus on autofill */
+   input:-webkit-autofill:focus {
+       -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
+       box-shadow: 0 0 0px 1000px #fff inset !important;
+   }

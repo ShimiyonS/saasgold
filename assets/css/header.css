@@ -1,0 +1,88 @@
+#header-placeholder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.hero,
+.features,
+.cta,
+.screenshots,
+.about,
+footer {
+    padding: 40px 0;
+}
+
+.feature-box,
+.cta,
+.about p {
+    text-align: center;
+}
+
+.logo {
+    width: 300px;
+    max-width: 90%;
+    margin-bottom: 20px;
+}
+
+.lang-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 999;
+}
+
+.lang-toggle button {
+    margin: 0 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Navigation Styles */
+.navbar {
+    background: #b22517 !important;
+    border-bottom: 2px solid #b22517;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+    color: #ffe082 !important;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffe082 !important;
+}
+
+.navbar-toggler {
+    border-color: #ffe082;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 224, 130, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
