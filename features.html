@@ -436,35 +436,47 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- customize JS -->
     <script src="assets/js/script.js"></script>
-    <script src="https://backend.saasgold.in/public/saasgold-chat-embed.js"></script>
-    <!-- Optional: Configure the widget -->
+
+    <!-- SaaSGOLD Chat Widget Configuration -->
     <script>
-        // Configure the SaaSGOLD AI Chat Widget
         window.SAASGOLD_CONFIG = {
-            apiUrl: 'https://backend.saasgold.in/api/ai-chat', // Replace with your actual backend URL
-            companyId: 0, // Replace with your company ID
-            position: 'bottom-right',
-            theme: 'light',
+            // API Configuration
+            apiUrl: 'https://backend.saasgold.in/api/ai-chat',
+            apiKey: 'sk_7e08d3c5f91beef967d52c94d29f5c7fb3a9bc3b8d3c7b02e513cdf1715d1fdf', // ← Replace with your actual API key
+            // Widget Settings
+            position: 'bottom-right', // 'bottom-right', 'bottom-left', 'top-right', 'top-left'
+            theme: 'light', // 'light' or 'dark'
+            language: 'en', // 'en', 'hi', 'ta'
+            autoOpen: false, // Auto-open chat on page load
+            requireUserDetails: true, // Require user details before chat
+            // Company Branding (Optional - will be auto-updated with company name)
             branding: {
-                name: 'Jewellery Store AI',
-                subtitle: 'Ask about our jewellery and chit funds! :gem:',
-                logo: 'https://your-logo.png' // Replace with your logo
+                name: 'Loading Company...', // ← Will be auto-updated with company name
+                subtitle: 'How can I help you today?', // ← Will be auto-updated
+                logo: 'https://your-website.com/logo.png', // ← Update with your logo URL
+                primaryColor: '#B22517', // ← Update with your brand color
+                secondaryColor: '#FFD66E' // ← Update with your secondary color
             },
+            // Welcome Message (Will be auto-updated with company name)
             welcomeMessage: {
-                title: ':wave: Welcome to Jewellery Store!',
-                content: 'I\'m your AI assistant here to help you learn about our jewellery and chit fund services. Ask me anything about our products, pricing, or chit fund options!'
+                title: 'Welcome!', // ← Will be auto-updated with company name
+                content: 'I\'m here to help you with any questions about our services. Ask me anything!' // ← Will be auto-updated
+            },
+            // User Details Form
+            userDetailsForm: {
+                title: 'Let\'s get to know you!',
+                subtitle: 'Please provide your details to start chatting',
+                fields: {
+                    name: { label: 'Full Name', placeholder: 'Enter your full name', required: true },
+                    email: { label: 'Email Address', placeholder: 'Enter your email address', required: false },
+                    phone: { label: 'Phone Number', placeholder: 'Enter your phone number', required: true }
+                }
             }
         };
-        // Example: Programmatic control
-        function openChat() {
-            window.SaaSGOLD.openChat();
-        }
-        function sendWelcomeMessage() {
-            window.SaaSGOLD.sendMessage('Hi, I\'m interested in your chit fund services');
-        }
-        // Example: Auto-open chat after 5 seconds (optional)
-        // setTimeout(() => window.SaaSGOLD.openChat(), 5000);
     </script>
+
+    <!-- Load SaaSGOLD Chat Widget -->
+    <script src="https://backend.saasgold.in/public/saasgold-chat-embed.js"></script>
 
 </body>
 

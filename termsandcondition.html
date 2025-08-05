@@ -9,9 +9,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
     <link rel="icon" type="image/jpeg" href="assets//favicon.jpg" />
     <link href="assets/css/header.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/chatbots.css">
     <style>
         body {
             background: linear-gradient(135deg, #fff8e1 70%, #ffe082 100%);
+            padding-top: 70px;
         }
 
         .terms-container {
@@ -139,90 +141,54 @@
         </p> -->
     </div>
 
-    <div class="terms-container" id="privacy-and-policy">
-        <h4 class="my-4 fw-bold">🔒 PRIVACY POLICY – SaaSGold 🔒</h4>
-        <p class="mb-2"><strong>Effective Date:</strong> 11-07-2025</p>
-
-        <p class="mb-4">
-            This Privacy Policy outlines how <strong>SaaSGold,</strong> owned by <strong>Jnana Inventive,</strong>
-            collects, uses, and manages data when
-            you use our website, application, or services.
-        </p>
-
-        <h5 class="mb-2 ">1. Information Collected</h5>
-        <p class="mb-2">We collect the following types of data:</p>
-        <ul class="mb-4">
-            <li class="mb-1"><strong>Business Information: </strong>Shop name, contact details, GST number</li>
-            <li class="mb-1"><strong>Platform Users:</strong> Admin/staff credentials, permissions</li>
-            <li class="mb-1"><strong>End-user Data:</strong>Customer names, chit plan details, transactions </li>
-            <li class="mb-1"><strong>Usage & Analytics:</strong>Log files, IP addresses, device info </li>
-        </ul>
-
-        <h5 class="mb-2">2. Data Ownership & Control</h5>
-        <p class="mb-2">All data entered into SaaSGold is stored securely on our cloud servers.</p>
-        <ul class="mb-4">
-            <li class="mb-1"><strong>Jnana Inventive retains full ownership of all data.</strong></li>
-            <li class="mb-1"> Clients may access and use the data for operational purposes under their active
-                subscription.</li>
-            <li class="mb-1"> We do not sell or share identifiable data with external parties without consent. </li>
-        </ul>
-
-        <h5 class="mb-2">3. How We Use Data</h5>
-        <ul class="mb-4">
-            <li class="mb-1">To provide and improve platform services</li>
-            <li class="mb-1">To generate reports, send reminders, and support your business operations</li>
-            <li class="mb-1">For internal analytics and performance improvement</li>
-            <li class="mb-1">To ensure compliance and security</li>
-        </ul>
-
-        <h5 class="mb-2">4. Data Protection</h5>
-        <ul class="mb-4">
-            <li class="mb-1">Encrypted data transmission (SSL)</li>
-            <li class="mb-1">Cloud-hosted infrastructure with restricted access</li>
-            <li class="mb-1">Regular backups and monitoring</li>
-        </ul>
-
-        <h5 class="mb-2">5. Data Sharing</h5>
-        <p class="mb-2">We do not share your data with third parties except:</p>
-        <ul class="mb-4">
-            <li class="mb-1">When required by law or legal authorities</li>
-            <li class="mb-1">With our secure service providers (e.g., SMS gateway, cloud services)</li>
-        </ul>
-
-        <h5 class="mb-2">6. Cookies & Tracking</h5>
-        <p class="mb-4">We use cookies to improve user experience and track usage behavior. No sensitive or personal
-            information is stored in cookies.</p>
-
-        <h5 class="mb-2">7. Data Access & Retention</h5>
-        <ul class="mb-4">
-            <li class="mb-1">Clients may access data while the subscription is active</li>
-            <li class="mb-1">Upon subscription termination, data access will be revoked unless a prior written agreement
-                exists</li>
-            <li class="mb-1">Data may be retained for compliance or internal use as per our data retention policy</li>
-        </ul>
-
-        <h5 class="mb-2">8. Children's Privacy</h5>
-        <p class="mb-4">SaaSGold is not intended for use by individuals under the age of 18.</p>
-
-        <h5 class="mb-2">9. Changes to Privacy Policy</h5>
-        <p class="mb-4">We reserve the right to update this policy. Clients will be notified in advance of significant
-            changes.</p>
-
-        <h5 class="mb-2">10. Contact Us</h5>
-        <p class="mb-2"><strong>Jnana Inventive – SaaSGold Product Team</strong></p>
-
-        <p class="mb-1"><strong>📧 Email:</strong><a href="mailto:reach@saasgold.in"> reach@saasgold.in</a></p>
-        <p class="mb-1"><strong>📍 Address:</strong>VSI Functional, No.96, 3rd Floor, Greeta Tech Park, South Wing (5th
-            Gate), Perungudi, Chennai, Tamil Nadu 600096</p>
-
-
-    </div>
-
-
-
-
     <!-- footer-section -->
     <div id="placeholders-for-footer"></div>
+
+    <!-- Floating Enquiry Form -->
+    <div class="floating-enquiry">
+        <button class="enquiry-toggle" onclick="toggleEnquiry()">
+            <img src="assets/call.png" width="25" height="25">
+        </button>
+    </div>
+
+    <div class="overlay" id="overlay" onclick="closeEnquiry()"></div>
+
+    <div class="enquiry-form" id="enquiryForm">
+        <div class="enquiry-header">
+            <h3>Get Free Demo</h3>
+            <button class="enquiry-close" onclick="closeEnquiry()">×</button>
+        </div>
+        <div class="enquiry-body">
+            <form id="enquiryFormData">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" maxlength="30" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" maxlength="10" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" maxlength="50">
+                </div>
+                <div class="form-group">
+                    <label for="business">Business Name</label>
+                    <input type="text" id="business" name="business" maxlength="20">
+                </div>
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location" maxlength="20" placeholder="City, State">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4"
+                        placeholder="Tell us about your requirements..."></textarea>
+                </div>
+                <button type="submit" class="enquiry-submit">Send Enquiry</button>
+            </form>
+        </div>
+    </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -231,6 +197,46 @@
     <!-- customize JS -->
     <script src="assets/js/script.js"></script>
 
+    <!-- SaaSGOLD Chat Widget Configuration -->
+    <script>
+        window.SAASGOLD_CONFIG = {
+            // API Configuration
+            apiUrl: 'https://backend.saasgold.in/api/ai-chat',
+            apiKey: 'sk_7e08d3c5f91beef967d52c94d29f5c7fb3a9bc3b8d3c7b02e513cdf1715d1fdf', // ← Replace with your actual API key
+            // Widget Settings
+            position: 'bottom-right', // 'bottom-right', 'bottom-left', 'top-right', 'top-left'
+            theme: 'light', // 'light' or 'dark'
+            language: 'en', // 'en', 'hi', 'ta'
+            autoOpen: false, // Auto-open chat on page load
+            requireUserDetails: true, // Require user details before chat
+            // Company Branding (Optional - will be auto-updated with company name)
+            branding: {
+                name: 'Loading Company...', // ← Will be auto-updated with company name
+                subtitle: 'How can I help you today?', // ← Will be auto-updated
+                logo: 'https://your-website.com/logo.png', // ← Update with your logo URL
+                primaryColor: '#B22517', // ← Update with your brand color
+                secondaryColor: '#FFD66E' // ← Update with your secondary color
+            },
+            // Welcome Message (Will be auto-updated with company name)
+            welcomeMessage: {
+                title: 'Welcome!', // ← Will be auto-updated with company name
+                content: 'I\'m here to help you with any questions about our services. Ask me anything!' // ← Will be auto-updated
+            },
+            // User Details Form
+            userDetailsForm: {
+                title: 'Let\'s get to know you!',
+                subtitle: 'Please provide your details to start chatting',
+                fields: {
+                    name: { label: 'Full Name', placeholder: 'Enter your full name', required: true },
+                    email: { label: 'Email Address', placeholder: 'Enter your email address', required: false },
+                    phone: { label: 'Phone Number', placeholder: 'Enter your phone number', required: true }
+                }
+            }
+        };
+    </script>
+
+    <!-- Load SaaSGOLD Chat Widget -->
+    <script src="https://backend.saasgold.in/public/saasgold-chat-embed.js"></script>
 
 </body>
 
