@@ -10,6 +10,7 @@
     <link rel="icon" type="image/jpeg" href="assets//favicon.jpg" />
     <link href="assets/css/header.css" rel="stylesheet">
     <link href="assets/css/contact.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/chatbots.css">
     <link rel="prefetch" href="header.html">
     <link rel="prefetch" href="footer.html">
 </head>
@@ -26,61 +27,110 @@
         </div>
 
         <div class=" col-md-6">
-                <form id="enquiryFormData" class="form-container">
+            <form id="enquiryFormData" class="form-container">
 
-                    <h3 class="text-center mb-4 fw-bold" id="contactHeading-en">Schedule a Free Demo</h3>
-                    <h3 class="text-center mb-4 fw-bold" id="contactHeading-ta">இலவச டெமோவிற்கு பதிவு செய்யவும்</h3>
+                <h3 class="text-center mb-4 fw-bold" id="contactHeading-en">Schedule a Free Demo</h3>
+                <h3 class="text-center mb-4 fw-bold" id="contactHeading-ta">இலவச டெமோவிற்கு பதிவு செய்யவும்</h3>
 
-                    <!-- Full Name -->
-                    <div class="input-container">
-                        <input type="text" id="name" placeholder=" " name="name" maxlength="30" required>
-                        <label for="name"><span id="name-en">Full Name *</span> <span id="name-ta">முழுப் பெயர் *</span></label>
-                    </div>
+                <!-- Full Name -->
+                <div class="input-container">
+                    <input type="text" id="name" placeholder=" " name="name" maxlength="30" required>
+                    <label for="name"><span id="name-en">Full Name *</span> <span id="name-ta">முழுப் பெயர்
+                            *</span></label>
+                </div>
 
-                    <!-- Phone Number -->
-                    <div class="input-container">
-                        <input type="number" id="phone" placeholder=" " name="phone" maxlength="10" required>
-                        <label for="phone"><span id="phone-en">Phone Number *</span> <span id="phone-ta">தொலைபேசி எண் *</span></label>
-                    </div>
+                <!-- Phone Number -->
+                <div class="input-container">
+                    <input type="number" id="phone" placeholder=" " name="phone" maxlength="10" required>
+                    <label for="phone"><span id="phone-en">Phone Number *</span> <span id="phone-ta">தொலைபேசி எண்
+                            *</span></label>
+                </div>
 
-                    <!-- Email Address -->
-                    <div class="input-container">
-                        <input type="email" id="email" placeholder=" " name="email" maxlength="50" required>
-                        <label for="email"> <span id="email-en">Email Address *</span><span id="email-ta">மின்னஞ்சல் முகவரி *</span></label>
-                    </div>
+                <!-- Email Address -->
+                <div class="input-container">
+                    <input type="email" id="email" placeholder=" " name="email" maxlength="50" required>
+                    <label for="email"> <span id="email-en">Email Address *</span><span id="email-ta">மின்னஞ்சல் முகவரி
+                            *</span></label>
+                </div>
 
-                    <!--bussiness name -->
-                    <div class="input-container">
-                        <input type="text" id="business" placeholder=" " name="business" maxlength="20" required>
-                        <label for="business"><span id="business-en">Business Name *</span><span id="business-ta">வணிகப் பெயர் *</span></label>
-                    </div>
+                <!--bussiness name -->
+                <div class="input-container">
+                    <input type="text" id="business" placeholder=" " name="business" maxlength="20" required>
+                    <label for="business"><span id="business-en">Business Name *</span><span id="business-ta">வணிகப்
+                            பெயர் *</span></label>
+                </div>
 
-                    <!--Location -->
-                    <div class="input-container">
-                        <input type="text" id="location" placeholder=" " name="location" maxlength="20" required>
-                        <label for="location"> <span id="location-en">Location *</span> <span id="location-ta">இடம் *</span> </label>
-                    </div>
+                <!--Location -->
+                <div class="input-container">
+                    <input type="text" id="location" placeholder=" " name="location" maxlength="20" required>
+                    <label for="location"> <span id="location-en">Location *</span> <span id="location-ta">இடம் *</span>
+                    </label>
+                </div>
 
-                    <!--Message -->
-                    <div class="input-container">
-                        <textarea id="message" placeholder=" " name="message" rows="4" style="resize: none;"></textarea>
-                        <label for="message"><span id="message-en">Message</span> <span id="message-ta">உங்கள் சந்தேகத்தை உள்ளிடவும்</span> </label>
-                    </div>
+                <!--Message -->
+                <div class="input-container">
+                    <textarea id="message" placeholder=" " name="message" rows="4" style="resize: none;"></textarea>
+                    <label for="message"><span id="message-en">Message</span> <span id="message-ta">உங்கள் சந்தேகத்தை
+                            உள்ளிடவும்</span> </label>
+                </div>
 
 
-                    <div class="text-center">
-                        <button type="submit" class="btn w-50 w-md-25 btn-submit" id="bt-en">Submit</button>
-                         <button type="submit" class="btn w-100 w-md-50 btn-submit"id="bt-ta">சமர்ப்பிக்கவும்</button>
-                    </div>
-                </form>
+                <div class="text-center">
+                    <button type="submit" class="btn w-50 w-md-25 btn-submit" id="bt-en">Submit</button>
+                    <button type="submit" class="btn w-100 w-md-50 btn-submit" id="bt-ta">சமர்ப்பிக்கவும்</button>
+                </div>
+            </form>
         </div>
     </div>
 
-
-
-
     <!-- footer-section -->
     <div id="placeholders-for-footer"></div>
+
+    <!-- Floating Enquiry Form -->
+    <div class="floating-enquiry">
+        <button class="enquiry-toggle" onclick="toggleEnquiry()">
+            <img src="assets/call.png" width="25" height="25">
+        </button>
+    </div>
+
+    <div class="overlay" id="overlay" onclick="closeEnquiry()"></div>
+
+    <div class="enquiry-form" id="enquiryForm">
+        <div class="enquiry-header">
+            <h3>Get Free Demo</h3>
+            <button class="enquiry-close" onclick="closeEnquiry()">×</button>
+        </div>
+        <div class="enquiry-body">
+            <form id="enquiryFormData">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" maxlength="30" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" maxlength="10" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" maxlength="50">
+                </div>
+                <div class="form-group">
+                    <label for="business">Business Name</label>
+                    <input type="text" id="business" name="business" maxlength="20">
+                </div>
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location" maxlength="20" placeholder="City, State">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4"
+                        placeholder="Tell us about your requirements..."></textarea>
+                </div>
+                <button type="submit" class="enquiry-submit">Send Enquiry</button>
+            </form>
+        </div>
+    </div>
 
 
     <!-- Bootstrap JS -->
@@ -89,6 +139,35 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- customize JS -->
     <script src="assets/js/script.js"></script>
+    <script src="https://backend.saasgold.in/public/saasgold-chat-embed.js"></script>
+    <!-- Optional: Configure the widget -->
+    <script>
+        // Configure the SaaSGOLD AI Chat Widget
+        window.SAASGOLD_CONFIG = {
+            apiUrl: 'https://backend.saasgold.in/api/ai-chat', // Replace with your actual backend URL
+            companyId: 0, // Replace with your company ID
+            position: 'bottom-right',
+            theme: 'light',
+            branding: {
+                name: 'Jewellery Store AI',
+                subtitle: 'Ask about our jewellery and chit funds! :gem:',
+                logo: 'https://your-logo.png' // Replace with your logo
+            },
+            welcomeMessage: {
+                title: ':wave: Welcome to Jewellery Store!',
+                content: 'I\'m your AI assistant here to help you learn about our jewellery and chit fund services. Ask me anything about our products, pricing, or chit fund options!'
+            }
+        };
+        // Example: Programmatic control
+        function openChat() {
+            window.SaaSGOLD.openChat();
+        }
+        function sendWelcomeMessage() {
+            window.SaaSGOLD.sendMessage('Hi, I\'m interested in your chit fund services');
+        }
+        // Example: Auto-open chat after 5 seconds (optional)
+        // setTimeout(() => window.SaaSGOLD.openChat(), 5000);
+    </script>
 
     <script>
 

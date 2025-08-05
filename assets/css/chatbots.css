@@ -1,0 +1,179 @@
+    /* Floating Enquiry Form */
+    .floating-enquiry {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 1000;
+    }
+
+    .enquiry-toggle {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #b22517 0%, #ffd66e 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
+        transition: all 0.3s ease;
+        position: relative;
+        border: none;
+        outline: none;
+    }
+
+    .enquiry-toggle:hover {
+        background: #9b2114;
+        transform: scale(1.1);
+    }
+
+    .enquiry-form {
+        position: fixed;
+        top: 0;
+        right: -400px;
+        width: 400px;
+        height: 100vh;
+        background: #fff;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease;
+        z-index: 1001;
+        overflow-y: auto;
+    }
+
+    .enquiry-form.open {
+        right: 0;
+    }
+
+    .enquiry-header {
+        background: #b22517;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .enquiry-header h3 {
+        margin: 0;
+        font-size: 1.5rem;
+    }
+
+    .enquiry-close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .enquiry-body {
+        padding: 30px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 600;
+        color: #333;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        font-size: 14px;
+        transition: border-color 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+        outline: none;
+        border-color: #b22517;
+    }
+
+    .enquiry-submit {
+        width: 100%;
+        background: #b22517;
+        color: #fff;
+        border: none;
+        padding: 15px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .enquiry-submit:hover {
+        background: #9b2114;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
+    }
+
+    .overlay.open {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    @media (max-width: 768px) {
+        .enquiry-form {
+            width: 100%;
+            right: -100%;
+        }
+
+        .floating-enquiry {
+            bottom: 20px;
+            right: 23px;
+        }
+    }
+
+
+    /* chatbot css */
+
+    .saasgold-chat-widget {
+        bottom: 105px !important;
+        right: 30px !important;
+    }
+
+    .saasgold-user-form-container {
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+    @media (max-width: 768px) {
+        .saasgold-chat-widget {
+            bottom: 105px !important;
+            right: 25px !important;
+        }
+    }
+
+
+    @media (max-width: 480px) {
+        .saasgold-chat-window {
+            width: calc(100vw - 60px) !important;
+            height: calc(100vh - 210px) !important;
+            bottom: 80px !important;
+            right: 0px !important;
+            left: auto !important;
+        }
+    }
