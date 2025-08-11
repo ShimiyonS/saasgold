@@ -11,54 +11,6 @@ function loadHTML(selector, file) {
 loadHTML("#header-placeholder", "header.html");
 loadHTML("#placeholders-for-footer", "footer.html");
 
-//language change function
-function setLanguage(lang) {
-    // Hide all language-specific elements first
-    const allElements = document.querySelectorAll('[id^="hero-"], [id^="sub-"], [id^="cta-"], [id^="f"], [id^="ft"], [id^="ct"], [id^="ctdesc"], [id^="screenshots-"], [id^="demo"], [id^="contactHeading-"],[id^="name-"],[id^="phone-"],[id^="email-"],[id^="location-"],[id^="business-"],[id^="message-"],[id^="bt-"]');
-    allElements.forEach(el => {
-        el.classList.add("hidden");
-    });
-
-    // Show elements for selected language
-    const activeElements = document.querySelectorAll(`[id$="-${lang}"]`);
-    activeElements.forEach(el => {
-        el.classList.remove("hidden");
-    });
-
-    // Special handling for demo elements (they don't follow the pattern)
-    if (lang === 'en') {
-        const demoEnElements = document.querySelectorAll('[id="demo-en"]');
-        demoEnElements.forEach(el => {
-            el.classList.remove("hidden");
-        });
-    } else if (lang === 'ta') {
-        const demoTaElements = document.querySelectorAll('[id="demo-ta"]');
-        demoTaElements.forEach(el => {
-            el.classList.remove("hidden");
-        });
-    }
-
-    window.localStorage.setItem("lang", lang)
-    var languageIndicator = document.getElementById('language')
-    if (languageIndicator) {
-        if (lang === null || lang === '' || lang === 'en') {
-            languageIndicator.innerText = "English";
-            console.log('hello1');
-        } else if (lang === 'ta') {
-            languageIndicator.innerText = "தமிழ்";
-            console.log('hello2');
-        } else {
-            languageIndicator.innerText = "English";
-            console.log('hello3');
-        }
-    }
-
-}
-
-var langu = window.localStorage.getItem("lang")
-// Default to English
-setLanguage(langu || 'en');
-
 // Initialize Owl Carousel
 $(document).ready(function () {
     $('.owl-carousel').owlCarousel({
