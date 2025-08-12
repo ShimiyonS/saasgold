@@ -1,15 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ta">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SaaSGold | Smart Gold Chit Management Software & Jewellery ERP Solution</title>
+    <title>Title - Connect with SaaSGold – Book a Free Demo</title>
+    <meta name="description"
+        content="Have a question or need help? Contact us or fill out the form — our SaaSGold team is here to assist you with demos, support and business solutions.">
+    <link rel="canonical" href="https://www.saasgold.in/contact" />
+    <meta name="author" content="JNANA Inventive">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
-    <link rel="icon" type="image/jpeg" href="assets//favicon.jpg" />
+    <link rel="icon" type="image/jpeg" href="assets/favicon.jpg" />
     <link href="assets/css/header.css" rel="stylesheet">
     <link href="assets/css/contact.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/chatbots.css">
     <link rel="prefetch" href="header.html">
     <link rel="prefetch" href="footer.html">
 </head>
@@ -22,65 +27,106 @@
 
         <div class="col-md-6 d-none d-md-block">
             <img src="assets/young-telemarketer-isolated-background-pointing-finger-side.png"
-                style="width: 100%; height: 85%; object-fit: cover;">
+                style="width: 100%; height: 85%; object-fit: fill;" alt="Contact image">
         </div>
 
         <div class=" col-md-6">
-                <form id="enquiryFormData" class="form-container">
+            <form id="enquiryFormData" class="form-container">
 
-                    <h3 class="text-center mb-4 fw-bold" id="contactHeading-en">Schedule a Free Demo</h3>
-                    <h3 class="text-center mb-4 fw-bold" id="contactHeading-ta">இலவச டெமோவிற்கு பதிவு செய்யவும்</h3>
+                <h1 class="text-center mb-4 fw-bold fs-2 " id="contactHeading"></h1>
 
-                    <!-- Full Name -->
-                    <div class="input-container">
-                        <input type="text" id="name" placeholder=" " name="name" maxlength="30" required>
-                        <label for="name"><span id="name-en">Full Name *</span> <span id="name-ta">முழுப் பெயர் *</span></label>
-                    </div>
+                <!-- Full Name -->
+                <div class="input-container">
+                    <input type="text" id="name" placeholder=" " name="name" maxlength="30" required>
+                    <label for="name"><span id="nameLabel"></span></label>
+                </div>
 
-                    <!-- Phone Number -->
-                    <div class="input-container">
-                        <input type="number" id="phone" placeholder=" " name="phone" maxlength="10" required>
-                        <label for="phone"><span id="phone-en">Phone Number *</span> <span id="phone-ta">தொலைபேசி எண் *</span></label>
-                    </div>
+                <!-- Phone Number -->
+                <div class="input-container">
+                    <input type="number" id="phone" placeholder=" " name="phone" maxlength="10" required>
+                    <label for="phone"><span id="phoneLabel"></span></label>
+                </div>
 
-                    <!-- Email Address -->
-                    <div class="input-container">
-                        <input type="email" id="email" placeholder=" " name="email" maxlength="50" required>
-                        <label for="email"> <span id="email-en">Email Address *</span><span id="email-ta">மின்னஞ்சல் முகவரி *</span></label>
-                    </div>
+                <!-- Email Address -->
+                <div class="input-container">
+                    <input type="email" id="email" placeholder=" " name="email" maxlength="50" required>
+                    <label for="email"> <span id="emailLabel"></span></label>
+                </div>
 
-                    <!--bussiness name -->
-                    <div class="input-container">
-                        <input type="text" id="business" placeholder=" " name="business" maxlength="20" required>
-                        <label for="business"><span id="business-en">Business Name *</span><span id="business-ta">வணிகப் பெயர் *</span></label>
-                    </div>
+                <!--bussiness name -->
+                <div class="input-container">
+                    <input type="text" id="business" placeholder=" " name="business" maxlength="20" required>
+                    <label for="business"><span id="businessLabel"></span></label>
+                </div>
 
-                    <!--Location -->
-                    <div class="input-container">
-                        <input type="text" id="location" placeholder=" " name="location" maxlength="20" required>
-                        <label for="location"> <span id="location-en">Location *</span> <span id="location-ta">இடம் *</span> </label>
-                    </div>
+                <!--Location -->
+                <div class="input-container">
+                    <input type="text" id="location" placeholder=" " name="location" maxlength="20" required>
+                    <label for="location"> <span id="locationLabel"></span></label>
+                </div>
 
-                    <!--Message -->
-                    <div class="input-container">
-                        <textarea id="message" placeholder=" " name="message" rows="4" style="resize: none;"></textarea>
-                        <label for="message"><span id="message-en">Message</span> <span id="message-ta">உங்கள் சந்தேகத்தை உள்ளிடவும்</span> </label>
-                    </div>
+                <!--Message -->
+                <div class="input-container">
+                    <textarea id="message" placeholder=" " name="message" rows="4" style="resize: none;"></textarea>
+                    <label for="message"><span id="messageLabel"></span></label>
+                </div>
 
 
-                    <div class="text-center">
-                        <button type="submit" class="btn w-50 w-md-25 btn-submit" id="bt-en">Submit</button>
-                         <button type="submit" class="btn w-100 w-md-50 btn-submit"id="bt-ta">சமர்ப்பிக்கவும்</button>
-                    </div>
-                </form>
+                <div class="text-center">
+                    <button type="submit" class="btn col-12 col-lg-6 btn-submit" id="submitBtnText"></button>
+                </div>
+            </form>
         </div>
     </div>
 
-
-
-
     <!-- footer-section -->
     <div id="placeholders-for-footer"></div>
+
+    <!-- Floating Enquiry Form -->
+    <div class="floating-enquiry">
+        <button class="enquiry-toggle" onclick="toggleEnquiry()">
+            <img src="assets/call.png" width="25" height="25" alt="call image">
+        </button>
+    </div>
+
+    <div class="overlay" id="overlay" onclick="closeEnquiry()"></div>
+
+    <div class="enquiry-form" id="enquiryForm">
+        <div class="enquiry-header">
+            <h3>Get Free Demo</h3>
+            <button class="enquiry-close" onclick="closeEnquiry()">×</button>
+        </div>
+        <div class="enquiry-body">
+            <form id="enquiryFormData">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" maxlength="30" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" maxlength="10" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" maxlength="50">
+                </div>
+                <div class="form-group">
+                    <label for="business">Business Name</label>
+                    <input type="text" id="business" name="business" maxlength="200">
+                </div>
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location" maxlength="20" placeholder="City, State">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4"
+                        placeholder="Tell us about your requirements..."></textarea>
+                </div>
+                <button type="submit" class="enquiry-submit">Send Enquiry</button>
+            </form>
+        </div>
+    </div>
 
 
     <!-- Bootstrap JS -->
@@ -88,19 +134,49 @@
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- customize JS -->
+    <script src="assets/js/contact.js"></script>
     <script src="assets/js/script.js"></script>
 
+    <!-- SaaSGOLD Chat Widget Configuration -->
     <script>
-
-        function restictNumber(idname) {
-            document.getElementById(idname).addEventListener("input", function () {
-                this.value = this.value.replace(/[0-9]/g, "");
-            });
-        }
-        restictNumber("name")
-        restictNumber("location")
-
+        window.SAASGOLD_CONFIG = {
+            // API Configuration
+            apiUrl: 'https://backend.saasgold.in/api/ai-chat',
+            apiKey: 'sk_7e08d3c5f91beef967d52c94d29f5c7fb3a9bc3b8d3c7b02e513cdf1715d1fdf', // ← Replace with your actual API key
+            // Widget Settings
+            position: 'bottom-right', // 'bottom-right', 'bottom-left', 'top-right', 'top-left'
+            theme: 'light', // 'light' or 'dark'
+            language: 'en', // 'en', 'hi', 'ta'
+            autoOpen: false, // Auto-open chat on page load
+            requireUserDetails: true, // Require user details before chat
+            // Company Branding (Optional - will be auto-updated with company name)
+            branding: {
+                name: 'Loading Company...', // ← Will be auto-updated with company name
+                subtitle: 'How can I help you today?', // ← Will be auto-updated
+                logo: 'assets/favicon.jpg', // ← Update with your logo URL
+                primaryColor: '#B22517', // ← Update with your brand color
+                secondaryColor: '#FFD66E' // ← Update with your secondary color
+            },
+            // Welcome Message (Will be auto-updated with company name)
+            welcomeMessage: {
+                title: 'Welcome!', // ← Will be auto-updated with company name
+                content: 'I\'m here to help you with any questions about our services. Ask me anything!' // ← Will be auto-updated
+            },
+            // User Details Form
+            userDetailsForm: {
+                title: 'Let\'s get to know you!',
+                subtitle: 'Please provide your details to start chatting',
+                fields: {
+                    name: { label: 'Full Name', placeholder: 'Enter your full name', required: true },
+                    email: { label: 'Email Address', placeholder: 'Enter your email address', required: false },
+                    phone: { label: 'Phone Number', placeholder: 'Enter your phone number', required: true }
+                }
+            }
+        };
     </script>
+
+    <!-- Load SaaSGOLD Chat Widget -->
+    <script src="https://backend.saasgold.in/public/saasgold-chat-embed.js"></script>
 
 </body>
 
