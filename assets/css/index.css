@@ -60,7 +60,7 @@
 
 
     .cta-section {
-      background: linear-gradient(135deg, #b22517 80%, #ffe082 100%);
+      background: linear-gradient(135deg, #791236 80%, #ffe082 100%);
       padding: 60px 0;
       display: flex;
       align-items: center;
@@ -81,7 +81,7 @@
 
     .cta-icon {
       background: #ffe082;
-      color: #b22517;
+      color:#791236;
       border-radius: 50%;
       width: 64px;
       height: 64px;
@@ -96,7 +96,7 @@
     .cta-card h2 {
       font-size: 2.2rem;
       font-weight: 700;
-      color: #b22517;
+      color:#791236;
       margin-bottom: 12px;
     }
 
@@ -111,7 +111,7 @@
       font-size: 1.2rem;
       font-weight: 600;
       background: #ffe082;
-      color: #b22517;
+      color:#791236;
       border: none;
       border-radius: 8px;
       padding: 14px 36px;
@@ -142,7 +142,7 @@
     .screenshots-heading {
       font-size: 2.2rem;
       font-weight: 700;
-      color: #b22517;
+      color:#791236;
       margin-bottom: 10px;
     }
 
@@ -224,7 +224,7 @@
       border-radius: 20px;
       box-shadow: 0 8px 32px 0 rgba(191, 161, 74, 0.10);
       padding: 36px 28px 28px 28px;
-      border-left: 6px solid #b22517;
+      border-left: 6px solid #791236;
     }
 
     .jnana-logo {
@@ -292,12 +292,12 @@
 
     .service-feature-title {
       font-weight: 600;
-      color: #b22517;
+      color:#791236;
       font-size: 1.08rem;
     }
 
     .services-section-title {
-      color: #b22517;
+      color:#791236;
       font-weight: 700;
       font-size: 1.75rem;
       margin-bottom: 18px;
