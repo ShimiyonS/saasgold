@@ -12,7 +12,9 @@
       font-family: 'Segoe UI', sans-serif;
       padding-top: 68px;
     }
-
+    textarea{
+      resize: none !important;
+    }
     .banner-video {
       width: 100%;
       height: 100%;
