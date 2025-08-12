@@ -9,7 +9,7 @@
     .enquiry-toggle {
         width: 60px;
         height: 60px;
-        background: linear-gradient(135deg, #b22517 0%, #ffd66e 100%);
+        background: linear-gradient(135deg, #791236 0%, #ffd66e 100%);
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -44,7 +44,7 @@
     }
 
     .enquiry-header {
-        background: #b22517;
+        background: #791236;
         color: #fff;
         padding: 20px;
         text-align: center;
@@ -96,12 +96,12 @@
     .form-group textarea:focus,
     .form-group select:focus {
         outline: none;
-        border-color: #b22517;
+        border-color: #791236;
     }
 
     .enquiry-submit {
         width: 100%;
-        background: #b22517;
+        background: #791236;
         color: #fff;
         border: none;
         padding: 15px;
@@ -148,6 +148,22 @@
 
 
     /* chatbot css */
+    .saasgold-chat-toggle {
+        background: linear-gradient(135deg, #791236 0%, #ffd66e 100%) !important;
+    }
+
+    .saasgold-chat-header {
+        background: linear-gradient(135deg, #791236 0%, #FFD66E 100%) !important;
+    }
+
+    .saasgold-form-submit {
+        background-color: #791236 !important;
+    }
+
+    .saasgold-chat-window {
+        width: 350px !important;
+        height: calc(100vh - 210px) !important;
+    }
 
     .saasgold-chat-widget {
         bottom: 105px !important;
@@ -170,7 +186,7 @@
     @media (max-width: 480px) {
         .saasgold-chat-window {
             width: calc(100vw - 60px) !important;
-            height: calc(100vh - 210px) !important;
+            height: calc(100vh - 280px) !important;
             bottom: 80px !important;
             right: 0px !important;
             left: auto !important;

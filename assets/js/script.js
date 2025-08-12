@@ -1,15 +1,35 @@
 // Reusable function to include HTML files
-function loadHTML(selector, file) {
+function loadHTML(selector, file, callback) {
     fetch(file)
         .then(res => res.text())
         .then(data => {
             document.querySelector(selector).innerHTML = data;
+             if (callback) callback();
         })
         .catch(err => console.error(`Error loading ${file}:`, err));
 }
 
-loadHTML("#header-placeholder", "header.html");
+loadHTML("#header-placeholder", "header.html",function() {
+    if (typeof setLanguageIndicator === 'function') {
+        setLanguageIndicator(); // call function from the separate JS file
+    }
+});
 loadHTML("#placeholders-for-footer", "footer.html");
+
+function setLanguageIndicator() {
+    var language = document.getElementById("language");
+    if (!language) return; // element not found
+
+    var lang = localStorage.getItem('lang');
+    setLang(lang)
+    if (lang === 'en') {
+        language.innerText = "English";
+    } else if (lang === 'ta') {
+        language.innerText = "தமிழ்";
+    } else {
+        language.innerText = "Language";
+    }  
+}
 
 // Initialize Owl Carousel
 $(document).ready(function () {

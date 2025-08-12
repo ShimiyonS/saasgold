@@ -16,10 +16,10 @@ const translations = {
         featuresDetail6: "Data securely stored in the cloud with 24/7 access.",
         digitalTitle: "Go Digital. Grow Your Business.",
         digitalDescription: "Offer your customers a modern mobile experience and manage your gold chit business with ease and security",
-        demoBtnText:"Free Demo",
-        mockHeading:"Your Chit Business, Digitized",
-        mockDescription:"Experience the modern, intuitive interface of our gold chit management app.",
-        jnanaDescription:"<strong>Jnana Inventive </strong> is a tech-forward company focused on digital innovation. SaaSGold is proudly developed and maintained by Jnana Inventive to help jewellery businesses manage their gold chit operations efficiently."
+        demoBtnText: "Free Demo",
+        mockHeading: "Your Chit Business, Digitized",
+        mockDescription: "Experience the modern, intuitive interface of our gold chit management app.",
+        jnanaDescription: "<strong>Jnana Inventive </strong> is a tech-forward company focused on digital innovation. SaaSGold is proudly developed and maintained by Jnana Inventive to help jewellery businesses manage their gold chit operations efficiently."
     },
     ta: {
         question: "ஏன் <span style='color:#bfa14a;'>SaaSGold?</span> தேர்வு செய்ய வேண்டும்?",
@@ -38,10 +38,10 @@ const translations = {
         featuresDetail6: "மேகத்தில் பாதுகாப்பாக சேமிக்கப்பட்ட தரவுகள் 24/7 அணுகலுடன்.",
         digitalTitle: "டிஜிட்டல் ஆகுங்கள். உங்கள் வணிகத்தை வளர்த்தெடுக்குங்கள்.",
         digitalDescription: "வாடிக்கையாளர்களுக்கு நவீன மொபைல் அனுபவத்தை வழங்குங்கள் மற்றும் உங்கள் நகை சிட் வணிகத்தை எளிதாகவும் பாதுகாப்பாகவும் நிர்வகிக்கவும்.",
-        demoBtnText:"டெமோவைக் பெறுங்கள்",
-        mockHeading:"உங்கள் சிட் வணிகம், இப்போது டிஜிட்டல் வடிவத்தில்",
-        mockDescription:"நவீன, புரிந்திரமான இடைமுகத்தை அனுபவிக்கவும்.",
-        jnanaDescription:"<strong>ஞானா இன்வென்டிவ்</strong> என்பது டிஜிட்டல் புதுமையை முன்னிறுத்தும் தொழில்நுட்ப நிறுவனம். நகை வணிகங்களுக்காக SaaSGold ஐ உருவாக்கியது ஞானா இன்வென்டிவ்."
+        demoBtnText: "டெமோவைக் பெறுங்கள்",
+        mockHeading: "உங்கள் சிட் வணிகம், இப்போது டிஜிட்டல் வடிவத்தில்",
+        mockDescription: "நவீன, புரிந்திரமான இடைமுகத்தை அனுபவிக்கவும்.",
+        jnanaDescription: "<strong>ஞானா இன்வென்டிவ்</strong> என்பது டிஜிட்டல் புதுமையை முன்னிறுத்தும் தொழில்நுட்ப நிறுவனம். நகை வணிகங்களுக்காக SaaSGold ஐ உருவாக்கியது ஞானா இன்வென்டிவ்."
     }
 };
 
@@ -49,6 +49,15 @@ function setLang(lang) {
     window.localStorage.setItem("lang", lang)
     for (let key in translations[lang]) {
         document.getElementById(key).innerHTML = translations[lang][key];
+    }
+    var language = document.getElementById("language")
+    window.localStorage.setItem("lang", lang)
+    if (lang === 'en') {
+        language.innerText = "English"
+    } else if (lang === 'ta') {
+        language.innerText = "தமிழ்"
+    } else {
+        language.innerText = "Language"
     }
 }
 

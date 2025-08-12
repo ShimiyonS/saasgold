@@ -1,6 +1,5 @@
 function restictNumber(idname) {
 
-    console.log("test");
     document.getElementById(idname).addEventListener("input", function () {
         this.value = this.value.replace(/[0-9]/g, "");
     });
@@ -14,7 +13,7 @@ const translations = {
         contactHeading: "Schedule a Free Demo",
         nameLabel: "Full Name *",
         phoneLabel: "Phone Number*",
-        emailLabel: "Email Address",
+        emailLabel: "Email Address *",
         businessLabel: "Business Name *",
         locationLabel: "Location *",
         messageLabel: "Message",
@@ -36,6 +35,15 @@ function setLang(lang) {
     window.localStorage.setItem("lang", lang)
     for (let key in translations[lang]) {
         document.getElementById(key).innerHTML = translations[lang][key];
+    }
+    var language = document.getElementById("language")
+    window.localStorage.setItem("lang", lang)
+    if (lang === 'en') {
+        language.innerText = "English"
+    } else if (lang === 'ta') {
+        language.innerText = "தமிழ்"
+    } else {
+        language.innerText = "Language"
     }
 }
 

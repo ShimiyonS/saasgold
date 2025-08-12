@@ -133,10 +133,17 @@ const translations = {
 
 function setLang(lang) {
     window.localStorage.setItem("lang", lang)
-    console.log("test");
-
     for (let key in translations[lang]) {
         document.getElementById(key).innerHTML = translations[lang][key];
+    }
+    var language = document.getElementById("language")
+    window.localStorage.setItem("lang", lang)
+    if (lang === 'en') {
+        language.innerText = "English"
+    } else if (lang === 'ta') {
+        language.innerText = "தமிழ்"
+    } else {
+        language.innerText = "Language"
     }
 }
 
