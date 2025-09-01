@@ -4,7 +4,7 @@ const translations = {
         <p class="mb-2"><strong>Effective Date:</strong> 11-07-2025</p>
 
         <p class="mb-4">
-        SaaSGold-க்கு வரவேற்கிறோம்! இது ஞான இன்வென்டிவ் வழங்கும் ஒரு டிஜிட்டல் சிட் நிதி 
+        SaaSGold-க்கு வரவேற்கிறோம்! இது ஞான இன்வென்டிவ் வழங்கும் ஒரு டிஜிட்டல் திட்டம் நிதி 
 மேலாண்மை தளமாகும், இது நகை கடைகளுக்கு வெள்ளை முத்திரை(Whitelabel) தீர்வாக வழங்கப்படுகிறது. எங்கள் இணையதளம், மொபைல் பயன்பாடு அல்லது சேவைகளை அணுகுவதன் மூலம் அல்லது பயன்படுத்துவதன் மூலம்பின்வரும் விதிமுறைகள் மற்றும் நிபந்தனைகளை நீங்கள் ஒப்புக்கொள்கிறீர்கள்.
         </p>
 
@@ -12,7 +12,7 @@ const translations = {
         <ul class="mb-4">
             <li class="mb-1"><strong>“SaaSGold,” “நாங்கள்,” “எங்கள்,”</strong>  என்பது தளத்தின் உரிமையாளரும் மற்றும் வழங்குநருமான ஞான இன்வென்டிவ்-ஐக் குறிக்கிறது.</li>
             <li class="mb-1"><strong>"வாடிக்கையாளர்," "நீங்கள்"</strong> என்பது வெள்ளை முத்திரை(Whitelabel) தளத்தைப் பயன்படுத்தும் நகை வணிகத்தைக் குறிக்கிறது.</li>
-            <li><strong>"இறுதிப் பயனர்"</strong>என்பது SaaSGold அமைப்பு வழியாக உங்கள் சிட் திட்டங்களில் சேர்ந்த வாடிக்கையாளர்களைக் குறிக்கிறது.</li>
+            <li><strong>"இறுதிப் பயனர்"</strong>என்பது SaaSGold அமைப்பு வழியாக உங்கள் திட்டம் திட்டங்களில் சேர்ந்த வாடிக்கையாளர்களைக் குறிக்கிறது.</li>
         </ul>
 
         <h5 class="mb-2">2. சேவை கண்ணோட்டம்</h5>
@@ -56,8 +56,8 @@ const translations = {
         <p class="mb-2">SaaSGold இதற்குப் பொறுப்பல்ல:</p>
         <ul class="mb-4">
             <li class="mb-1">தவறான தரவு உள்ளீடு அல்லது வாடிக்கையாளர் தவறான நிர்வாகத்தால் ஏற்படும் இழப்புகள்</li>
-            <li class="mb-1">சிட் ஃபண்ட் திட்டங்களின் நிதி விளைவுகள்</li>
-            <li>வாடிக்கையாளர் சிட் செயல்பாடுகளை தவறாகப் பயன்படுத்துவதால் ஏற்படும் சட்ட சிக்கல்கள்</li>
+            <li class="mb-1">திட்டம் ஃபண்ட் திட்டங்களின் நிதி விளைவுகள்</li>
+            <li>வாடிக்கையாளர் திட்டம் செயல்பாடுகளை தவறாகப் பயன்படுத்துவதால் ஏற்படும் சட்ட சிக்கல்கள்</li>
         </ul>
 
         <h5 class="mb-2">9. புதுப்பிப்புகள்</h5>
@@ -71,7 +71,7 @@ const translations = {
         <p class="mb-2"><strong>Effective Date:</strong> 11-07-2025</p>
 
         <p class="mb-4">
-            Welcome to <strong>SaaSGold,</strong> a digital chit fund management platform by <strong>Jnana
+            Welcome to <strong>SaaSGold,</strong> a digital scheme fund management platform by <strong>Jnana
                 Inventive,</strong> offered to jewellery shops
             as a white-label solution. By accessing or using our website, mobile application, or services, you agree to
             the following Terms & Conditions.
@@ -83,12 +83,12 @@ const translations = {
                 of the platform.</li>
             <li class="mb-1"><strong>“Client,” “you,”</strong> refers to the jewellery business using the white-label
                 platform.</li>
-            <li><strong>“End-user”</strong> refers to the customers enrolled in your chit schemes via the SaaSGold
+            <li><strong>“End-user”</strong> refers to the customers enrolled in your scheme schemes via the SaaSGold
                 system.</li>
         </ul>
 
         <h5 class="mb-2">2. Service Overview</h5>
-        <p class="mb-4">SaaSGold provides a subscription-based software platform for digital chit fund management. This
+        <p class="mb-4">SaaSGold provides a subscription-based software platform for digital scheme fund management. This
             includes customer records, plan tracking, payment reminders, analytics, and branded white-label interfaces.
         </p>
 
@@ -98,7 +98,7 @@ const translations = {
             intellectual property of SaaSGold.</p>
 
         <h5 class="mb-2">4. Data Ownership & Usage</h5>
-        <p class="mb-2">All data (including but not limited to user details, transaction records, chit plan information,
+        <p class="mb-2">All data (including but not limited to user details, transaction records, scheme plan information,
             and communication history) entered into the platform is stored and managed by SaaSGold.</p>
         <ul class="mb-4">
             <li class="mb-1"><strong>Data ownership remains with Jnana Inventive (SaaSGold).</strong></li>
@@ -138,8 +138,8 @@ const translations = {
         <p class="mb-2">SaaSGold is not liable for:</p>
         <ul class="mb-4">
             <li class="mb-1">Losses due to incorrect data entry or client mismanagement</li>
-            <li class="mb-1">Financial outcomes of chit fund schemes</li>
-            <li>Legal issues arising from client misuse of chit operations</li>
+            <li class="mb-1">Financial outcomes of scheme fund schemes</li>
+            <li>Legal issues arising from client misuse of scheme operations</li>
         </ul>
 
         <h5 class="mb-2">9. Updates</h5>
