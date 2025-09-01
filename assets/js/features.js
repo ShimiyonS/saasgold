@@ -1,15 +1,15 @@
 const translations = {
     en: {
         featuresMainQuestion: "Why <span class='color-gold'>SaaSGold ?</span>",
-        featuresMainAnswer: "SaaSGold is more than just a <strong>chit fund management software.</strong> it's a full-fledged <strong>jewellery store management software</strong> tailored for retail jewellers who want to streamline operations, manage chits, and grow their business digitally. Whether you need a <strong>jewellery billing software, jewellery inventory software,</strong> or a <strong>POS software for jewellery stores,</strong> SaaSGold does it all.",
+        featuresMainAnswer: "SaaSGold is more than just a <strong>chit fund management software.</strong> it's a full-fledged <strong>jewellery store management software</strong> tailored for retail jewellers who want to streamline operations, manage schemes, and grow their business digitally. Whether you need a <strong>jewellery billing software, jewellery inventory software,</strong> or a <strong>POS software for jewellery stores,</strong> SaaSGold does it all.",
         keyHeading: "Key Value Propositions:",
         keyHeadingPoint1: "AI-powered features for smarter decision-making",
         keyHeadingPoint2: "White-labeled app to reflect your brand",
         keyHeadingPoint3: "Cloud-based access for multi-store control",
         keyHeadingPoint4: "Built-in CRM, loyalty, and referral systems",
         featuresHeading: "Feature Highlights",
-        featuresSubQuestion1: "1. Chit Fund Management",
-        featuresSubAnswer1: "Run and manage chit schemes effortlessly with auto-reminders, bidding control, payout tracking, and transparent reports.",
+        featuresSubQuestion1: "1. Scheme Fund Management",
+        featuresSubAnswer1: "Run and manage scheme schemes effortlessly with auto-reminders, bidding control, payout tracking, and transparent reports.",
 
         featuresSubQuestion2: "2. AI-Powered Business Intelligence",
         featuresSubAnswer2: "Make smarter decisions with AI tools that detect payment risks, predict customer behavior, and analyze sales patterns.",
@@ -33,7 +33,7 @@ const translations = {
         featuresSubAnswer8: " Maintain detailed customer profiles, KYC, history, dues, and preferences for personalized engagement.",
 
         featuresSubQuestion9: "9. White-Labeled Customer App",
-        featuresSubAnswer9: "Offer a branded app where customers can check chit details, make payments, and refer friends.",
+        featuresSubAnswer9: "Offer a branded app where customers can check scheme details, make payments, and refer friends.",
 
         featuresSubQuestion10: "10. Loyalty, Referral & Rewards",
         featuresSubAnswer10: "Increase customer retention with loyalty points, cashback on referrals, and periodic rewards.",
@@ -47,7 +47,7 @@ const translations = {
         demoButton: "Get a Demo",
 
         section3Heading: "Built for <span class='color-gold'>Jewellery</span> Retailers</span>",
-        section3Headingpoint1: "Family-run stores managing multiple chit schemes",
+        section3Headingpoint1: "Family-run stores managing multiple scheme schemes",
         section3Headingpoint2: "Modern jewellery chains using SaaSGold as a centralized <strong>jewellery ERP software</strong>",
         section3Headingpoint3: "Store owners looking for seamless <strong>POS software for jewellery stores</strong> that integrates with inventory and billing",
 
@@ -66,7 +66,7 @@ const translations = {
     },
     ta: {
         featuresMainQuestion: "ஏன் <span class='color-gold'>SaaSGold ?</span>",
-        featuresMainAnswer: "SaaSGold என்பது ஒரு சிட் நிதி மேலாண்மை மென்பொருள் - இது சில்லறை நகைக்கடைக்காரர்களுக்காக வடிவமைக்கப்பட்ட ஒரு முழுமையான நகைக் கடை மேலாண்மை மென்பொருளாகும். நகைக்கடைக்காரர்கள் செயல்பாடுகளை நெறிப்படுத்தவும், சிட்டுகளை நிர்வகிக்கவும் மற்றும் வணிகத்தை டிஜிட்டல் முறையில் வளர்க்கவும்.நாங்கள் நகைக் கடைகளுக்கான நகை பில்லிங் மென்பொருள், நகை சரக்கு மென்பொருள் மற்றும் POS மென்பொருளை வழங்குகிறது.",
+        featuresMainAnswer: "SaaSGold என்பது ஒரு திட்டம் நிதி மேலாண்மை மென்பொருள் - இது சில்லறை நகைக்கடைக்காரர்களுக்காக வடிவமைக்கப்பட்ட ஒரு முழுமையான நகைக் கடை மேலாண்மை மென்பொருளாகும். நகைக்கடைக்காரர்கள் செயல்பாடுகளை நெறிப்படுத்தவும், திட்டம்டுகளை நிர்வகிக்கவும் மற்றும் வணிகத்தை டிஜிட்டல் முறையில் வளர்க்கவும்.நாங்கள் நகைக் கடைகளுக்கான நகை பில்லிங் மென்பொருள், நகை சரக்கு மென்பொருள் மற்றும் POS மென்பொருளை வழங்குகிறது.",
         keyHeading: "முக்கிய அம்சங்கள்:",
         keyHeadingPoint1: "AI உந்துதலுடன் சிறந்த வணிக முடிவுகள்.",
         keyHeadingPoint2: "உங்கள் பிராண்ட் அடையாளத்திற்கு ஏற்ற சொந்த செயலி.",
@@ -74,8 +74,8 @@ const translations = {
         keyHeadingPoint4: "CRM, வெகுமதிகள் மற்றும் பரிந்துரைகளுக்கான ஒருங்கிணைந்த அமைப்புகள்.",
         featuresHeading: "சிறப்பம்சங்கள்",
 
-        featuresSubQuestion1: "1. சிட் ஃபண்ட் மேலாண்மை",
-        featuresSubAnswer1: "ஆட்டோமேட்டிக் நினைவூட்டல்கள்,  பணம் செலுத்தும் கண்காணிப்பு மற்றும் வெளிப்படையான அறிக்கைகள் மூலம் சிட்  திட்டங்களை எளிதாக நிர்வகிக்கலாம்.",
+        featuresSubQuestion1: "1. திட்டம் ஃபண்ட் மேலாண்மை",
+        featuresSubAnswer1: "ஆட்டோமேட்டிக் நினைவூட்டல்கள்,  பணம் செலுத்தும் கண்காணிப்பு மற்றும் வெளிப்படையான அறிக்கைகள் மூலம் திட்டம்  திட்டங்களை எளிதாக நிர்வகிக்கலாம்.",
 
         featuresSubQuestion2: "2. AI வணிக நுண்ணறிவு",
         featuresSubAnswer2: "கட்டண அபாயங்களைக் கண்டறியவும், வாடிக்கையாளர்களின் நடத்தையை கண்காணிக்கவும், விற்பனை முறைகளை பகுப்பாய்வு செய்யவும் AI கருவிகளைப் பயன்படுத்தி சிறந்த முடிவுகளை பெறலாம்.",
@@ -99,7 +99,7 @@ const translations = {
         featuresSubAnswer8: "வாடிக்கையாளர் சுயவிவரங்கள், KYC, பணம் செலுத்திய விவரம், நிலுவைத் தொகைகள் மற்றும் தனிப்பயனாக்கப்பட்ட ஈடுபாட்டிற்கான விருப்பங்களைப் பராமரிக்கலாம்.",
 
         featuresSubQuestion9: "9. உங்கள் பிராண்டுக்கேற்ப வாடிக்கையாளர் செயலி",
-        featuresSubAnswer9: "வாடிக்கையாளர்கள் சிட் விவரங்களைச் சரிபார்க்கவும், பணம் செலுத்தவும், நண்பர்களைப் பரிந்துரைக்கவும் உங்கள் பிராண்ட் செயலியின் மூலம் பார்த்துக்கொள்ளலாம்.",
+        featuresSubAnswer9: "வாடிக்கையாளர்கள் திட்டம் விவரங்களைச் சரிபார்க்கவும், பணம் செலுத்தவும், நண்பர்களைப் பரிந்துரைக்கவும் உங்கள் பிராண்ட் செயலியின் மூலம் பார்த்துக்கொள்ளலாம்.",
 
         featuresSubQuestion10: "10. விசுவாசம், பரிந்துரை & வெகுமதிகள்",
         featuresSubAnswer10: "விருப்பப் புள்ளிகள், பரிந்துரைகளுக்கு கேஷ்பேக் மற்றும் அவ்வப்போது வெகுமதிகள் மூலம் வாடிக்கையாளர்களின் தக்கவைப்பை அதிகரிக்கலாம்.",
