@@ -201,7 +201,6 @@ function closeEnquiry() {
                 email: data.email || ''
             };
 
-            console.log("ssssssssssssss", payload, formData)
             try {
 
                 // Submit to Google Sheet (CORS workaround using no-cors)
