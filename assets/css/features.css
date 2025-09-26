@@ -9,12 +9,12 @@ body {
 }
 
 .container-1400 {
-    max-width: 1400px;
+    /* max-width: 1400px; */
     margin: auto;
 }
 
 .color-meron {
-    color: #9b2114;
+    color: #791236;
 }
 
 .color-gold {
@@ -89,9 +89,11 @@ body {
 }
 
 /* Scroll Up Animation */
-.scroll-up:hover, .scroll-down:hover{
-     animation-play-state: paused;
+.scroll-up:hover,
+.scroll-down:hover {
+    animation-play-state: paused;
 }
+
 .scroll-up {
     animation: scrollUp 20s linear infinite;
     animation-play-state: running;
@@ -141,7 +143,7 @@ body {
     font-size: 1.2rem;
     font-weight: 600;
     background: #ffe082;
-    color: #b22517;
+    color: #791236;
     border: none;
     border-radius: 39px 39px 39px 39px;
     padding: 14px 36px;
@@ -152,4 +154,10 @@ body {
 .btn-demo:hover {
     background: #bfa14a;
     color: #fff;
+}
+
+@media (max-width: 992px) {
+    #section3Heading {
+        font-size: 1.2rem !important;
+    }
 }
