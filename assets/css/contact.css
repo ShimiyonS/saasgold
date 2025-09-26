@@ -25,6 +25,7 @@
        left: 12px;
        color: #777;
        background: #fff;
+       padding: 0 5px;
        transition: 0.3s ease all;
        pointer-events: none;
        font-size: 16px;
@@ -56,7 +57,7 @@
        font-size: 1.2rem;
        font-weight: 600;
        background: #ffe082;
-       color:#791236;
+       color: #b22517;
        border: none;
        border-radius: 8px;
        padding: 14px 36px;
