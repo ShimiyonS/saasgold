@@ -4,7 +4,7 @@ const translations = {
         <p class="mb-2"><strong>Effective Date:</strong> 11-07-2025</p>
 
         <p class="mb-4">
-            At SaaSGold, we are committed to delivering a reliable and high-quality AI-powered money-saving scheme management solution for jewellery stores. We understand that circumstances may arise where you may request a cancellation or refund. Please read our refund policy carefully:
+            At SaaSGold, we are committed to delivering a reliable and high-quality AI-powered gold-saving scheme management solution for jewellery stores. We understand that circumstances may arise where you may request a cancellation or refund. Please read our refund policy carefully:
         </p>
 
         <h5 class="mb-2 ">1. Free Trial Period</h5>
@@ -29,7 +29,7 @@ const translations = {
         <h5 class="mb-2">4. Non-Refundable Cases</h5>
         <p class="mb-2">Refunds will <strong>not</strong> be issued in the following cases:</p>
         <ul class="mb-4">
-            <li class="mb-1">Change of business decision (e.g., no longer wanting to use chit scheme management software).</li>
+            <li class="mb-1">Change of business decision (e.g., no longer wanting to use saving scheme management software).</li>
             <li class="mb-1">Lack of usage or failure to use SaaSGold features after subscription.</li>
             <li class="mb-1">Issues arising from third-party integrations (payment gateway, WhatsApp/SMS API, etc.) outside our control.</li>
         </ul>
@@ -75,7 +75,7 @@ const translations = {
         <h5 class="mb-2">4. Non-Refundable Cases</h5>
         <p class="mb-2">Refunds will <strong>not</strong> be issued in the following cases:</p>
         <ul class="mb-4">
-            <li class="mb-1">Change of business decision (e.g., no longer wanting to use chit scheme management software).</li>
+            <li class="mb-1">Change of business decision (e.g., no longer wanting to use saving scheme scheme management software).</li>
             <li class="mb-1">Lack of usage or failure to use SaaSGold features after subscription.</li>
             <li class="mb-1">Issues arising from third-party integrations (payment gateway, WhatsApp/SMS API, etc.) outside our control.</li>
         </ul>
