@@ -11,7 +11,7 @@ const translations = {
         <ul class="mb-4">
             <li class="mb-1"><strong>வணிகத் தகவல்: </strong>கடையின் பெயர், தொடர்பு விவரங்கள், ஜிஎஸ்டி எண்</li>
             <li class="mb-1"><strong>தள பயனர்கள்:</strong> நிர்வாகி/பணியாளர் சான்றுகள், அனுமதிகள்</li>
-            <li class="mb-1"><strong>இறுதி பயனர் தரவு</strong>வாடிக்கையாளர் பெயர்கள், சிட்  திட்ட விவரங்கள், பரிவர்த்தனைகள் </li>
+            <li class="mb-1"><strong>இறுதி பயனர் தரவு</strong>வாடிக்கையாளர் பெயர்கள், சேமிப்புத்  திட்ட விவரங்கள், பரிவர்த்தனைகள் </li>
             <li class="mb-1"><strong>பயன்பாடு & பகுப்பாய்வு:</strong>பதிவு கோப்புகள், IP முகவரிகள், சாதனத் தகவல் </li>
         </ul>
 
@@ -83,7 +83,7 @@ const translations = {
         <ul class="mb-4">
             <li class="mb-1"><strong>Business Information: </strong>Shop name, contact details, GST number</li>
             <li class="mb-1"><strong>Platform Users:</strong> Admin/staff credentials, permissions</li>
-            <li class="mb-1"><strong>End-user Data:</strong>Customer names, chit plan details, transactions </li>
+            <li class="mb-1"><strong>End-user Data:</strong>Customer names, saving schemes plan details, transactions </li>
             <li class="mb-1"><strong>Usage & Analytics:</strong>Log files, IP addresses, device info </li>
         </ul>
 
