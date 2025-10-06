@@ -26,6 +26,82 @@
             font-family: Arial, sans-serif;
             line-height: 1.8;
         }
+
+        .pricing-page-head {
+            font-weight: 600;
+        }
+
+
+        .table-container {
+            max-width: 100%;
+            overflow-x: auto;
+            /* horizontal scroll if needed */
+            overflow-y: auto;
+            /* vertical scroll */
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            background: #fff;
+            margin: 10px 0 40px ;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+            /* ensures scroll on small screens */
+        }
+
+        thead {
+            background-color: #333;
+            color: #fff;
+        }
+
+        th,
+        td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .feature-cell {
+            color: #ffe082 ;
+            background: #791236 !important;
+            font-weight: 600;
+        }
+
+        .please-contact-btn {
+            padding: 10px;
+            border-radius: 6px;
+            width: 100%;
+            text-decoration: none;
+            color: #9b2114;
+            background-color: #ffe082;
+        }
+
+        
+        /* Responsive style */
+        @media (max-width: 768px) {
+
+            th,
+            td {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+
+        /* Optional: make first column sticky */
+        th:first-child,
+        td:first-child {
+            background-color: #f1f1f1;
+            position: sticky;
+            left: 0;
+            z-index: 1;
+        }
     </style>
 </head>
 
@@ -34,14 +110,94 @@
     <div id="header-placeholder"></div>
 
     <div class="refund-policy-container" id="pricing">
-        <h4>SaaSGold Pricing</h4>
-        <table>
-            <th>hello</th>
-        </table>
+        <h4 class="pricing-page-head">SaaSGold Pricing</h4>
+        <p>Accelerate your jewellery business growth with SaaSGold – the next-gen chit fund
+            management platform crafted for modern retail. Whether you're a fast-scaling enterprise or
+            an ambitious local brand, SaaSGold empowers you with sleek, white-labeled mobile apps,
+            AI-enabled, intelligent POS systems, and powerful analytics to simplify operations, boost
+            customer trust, and scale effortlessly</p>
+        <p>Transform how you manage chits, payments, and customer relationships – all from one
+            powerful, easy-to-use platform built for the digital age.</p>
 
+        <h4 class="pricing-page-head">SaaSGold Pricing Plans Overview</h4>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="feature-cell">Feature</th>
+                        <th>Valarchi Sigaram Plan (வளர்ச்சி சிகரம்)</th>
+                        <th>Enterprise Growth Plan</th>
+                        <th>Enterprises</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="feature-cell">Setup Fee</td>
+                        <td>₹49,999 </td>
+                        <td>₹99,999 </td>
+                        <td rowspan="12"><a href="/contact.html" class="please-contact-btn"> Contact
+                                Us </a></td>
+                    </tr>
+                    <tr>
+                        <td class="feature-cell">Monthly Subscription</td>
+                        <td>₹999/month</td>
+                        <td>₹1,999/month</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-cell">Annual Subscription Discount</td>
+                        <td>10% Off</td>
+                        <td>10% Off</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-cell">Customer Management</td>
+                        <td>Up to 400 Customers</td>
+                        <td>Unlimited Customers</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-cell">Payment Processing</td>
+                        <td>Unlimited</td>
+                        <td>Unlimited</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-cell">White-Labeled Mobile Apps</td>
+                        <td>Customer App</td>
+                        <td>Customer App Collection App Store App</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-cell">POS System</td>
+                        <td>5,000 Billing Transactions, Inventory & CRM Tools</td>
+                        <td>10,000 Billing Transactions, Inventory & CRM Tools</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-cell">Analytics</td>
+                        <td>AI-Powered Business Insights (limited)</td>
+                        <td>AI-Powered Business Insights</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-cell">Admin Panel</td>
+                        <td>Centralized Web-Based Panel</td>
+                        <td>Centralized Web-Based Panel</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-cell">User Access</td>
+                        <td>5 Users</td>
+                        <td>10 Users</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-cell">Communication Tools*</td>
+                        <td>WhatsApp, SMS, Email Integration</td>
+                        <td>WhatsApp, SMS, Email Integration</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-cell">Customer Support</td>
+                        <td>Dedicated Support</td>
+                        <td>Priority Support</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-
-
     <!-- footer-section -->
     <div id="placeholders-for-footer"></div>
 
