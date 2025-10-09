@@ -26,16 +26,37 @@
       left: 0;
     }
 
-    .hero-video-wrapper {
+    /* this code for image in the hero banner section for video */
+    /* .hero-video-wrapper {
       position: relative;
       width: 100%;
       aspect-ratio: 16/9;
       max-height: 720px;
       min-height: 220px;
       overflow: hidden;
+    } */
+
+
+    /* this code for image in the hero banner section for image*/
+    .hero-video-wrapper {
+      width: 100%;
+      overflow: hidden;
     }
 
-    @media (max-width: 991px) {
+    .hero-img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 767px) {
+      .hero-img {
+        min-height: 150px;
+      }
+    }
+
+    /* this code for image in the hero banner section */
+    /* @media (max-width: 991px) {
       .hero-video-wrapper {
         aspect-ratio: 16/9;
         min-height: 180px;
@@ -59,7 +80,7 @@
         aspect-ratio: 16/9;
         min-height: 80px;
       }
-    }
+    } */
 
 
 
