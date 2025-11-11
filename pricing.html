@@ -118,8 +118,8 @@
             display: inline-block;
             padding: 6px 10px;
             border-radius: 999px;
-            background: rgba(184, 134, 11, 0.08);
-            color: var(--accent);
+            background: #ffe082;
+            color: #9b2114;
             font-weight: 600;
             font-size: 13px
         }
@@ -152,7 +152,17 @@
             color: var(--test)
         }
 
+        .btn-primary:hover {
+            background: var(--accent);
+            color: var(--test)
+        }
+
         .btn-ghost {
+            background: transparent;
+            border: 1px solid black
+        }
+
+        .btn-ghost:hover {
             background: transparent;
             border: 1px solid black
         }
@@ -306,8 +316,10 @@
                 <h1>SaaSGOLD Pricing – Simple. Transparent. Designed to Grow with You</h1>
                 <p class="lead">Every jewellery shop deserves its own branded app and digital savings platform.</p>
                 <div class="">
-                    <button class="btn btn-primary" onclick="bookDemo()">Book a Free Demo</button>
-                    <button class="btn btn-ghost" onclick="talkTeam()">Talk to Our Team</button>
+                    <a href="contact.html" class="btn btn-warning"
+                        style="background: #ffe082; color: #9b2114; border: none; margin-left: 10px;">Book a Free
+                        Demo</a>
+                    <a href="contact.html" class="btn btn-ghost" style=" margin-left: 10px;">Talk to Our Team</a>
                 </div>
             </div>
             <!-- <div class="hero-right">
@@ -413,8 +425,11 @@
             <p style="color:var(--muted)">Take your business online with SaaSGOLD and experience faster growth, higher
                 customer loyalty, and more sales.</p>
             <div style="display:flex;gap:12px;margin-top:10px">
-                <button class="btn btn-primary" onclick="bookDemo()">Book a Free Demo</button>
-                <button class="btn btn-ghost" onclick="talkTeam()">Talk to Our Team</button>
+                
+                <a href="contact.html" class="btn btn-warning"
+                    style="background: #ffe082; color: #9b2114; border: none; margin-left: 10px;">Book a Free Demo</a>
+                <a href="contact.html" class="btn btn-ghost" style=" margin-left: 10px;">Talk to Our Team</a>
+                
             </div>
         </section>
     </div>
@@ -473,6 +488,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- customize JS -->
     <script src="assets/js/script.js"></script>
+
+    <script>
+        function recalc() {
+            const users = parseInt(document.getElementById("activeUsers").value) || 0;
+            const amountPerUser = 25; // 💰 cost per user
+            const total = users * amountPerUser;
+            document.getElementById("monthlyAmount").textContent = `₹${total}`;
+        }
+
+        // initialize once
+        recalc();
+    </script>
 
     <!-- SaaSGOLD Chat Widget Configuration -->
     <script>
