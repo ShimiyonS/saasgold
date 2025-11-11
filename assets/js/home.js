@@ -1,11 +1,11 @@
 const translations = {
     en: {
         question: "Why Choose <span style='color:#bfa14a;'>SaaSGold?</span>",
-        answer: "Empower your jewellery business with our smart, secure, and easy-to-use gold scheme management platform.",
+        answer: "Empower your jewellery business with our smart, secure, and easy-to-use gold saving scheme management platform.",
         featureTitle1: "Branded Mobile App",
-        featuresDetail1: "Customers can view scheme details, make payments, and receive alerts.",
-        featureTitle2: "Easy Scheme Management",
-        featuresDetail2: "Track scheme payments, due dates, and customer records easily.",
+        featuresDetail1: "Customers can view saving scheme details, make payments, and receive alerts.",
+        featureTitle2: "Easy Saving Scheme Management",
+        featuresDetail2: "Track saving scheme payments, due dates, and customer records easily.",
         featureTitle3: "Refer & Earn",
         featuresDetail3: "Encourage customers to refer others and earn rewards on successful joins.",
         featureTitle4: "Reward for Timely Payments",
@@ -15,19 +15,20 @@ const translations = {
         featureTitle6: "Secure & Reliable",
         featuresDetail6: "Data securely stored in the cloud with 24/7 access.",
         digitalTitle: "Go Digital. Grow Your Business.",
-        digitalDescription: "Offer your customers a modern mobile experience and manage your gold scheme business with ease and security",
+        digitalDescription: "Offer your customers a modern mobile experience and manage your gold saving scheme business with ease and security",
         demoBtnText: "Free Demo",
-        mockHeading: "Your Scheme Business, Digitized",
-        mockDescription: "Experience the modern, intuitive interface of our gold scheme management app.",
-        jnanaDescription: "<strong>Jnana Inventive </strong> is a tech-forward company focused on digital innovation. SaaSGold is proudly developed and maintained by Jnana Inventive to help jewellery businesses manage their gold scheme operations efficiently."
+        mockHeading: "Your Saving Scheme Business, Digitized",
+        mockDescription: "Experience the modern, intuitive interface of our gold saving scheme management app.",
+        jnanaDescription: "<strong>Jnana Inventive </strong> is a tech-forward company focused on digital innovation. SaaSGold is proudly developed and maintained by Jnana Inventive to help jewellery businesses manage their gold saving scheme operations efficiently."
     },
+    
     ta: {
         question: "ஏன் <span style='color:#bfa14a;'>SaaSGold?</span> தேர்வு செய்ய வேண்டும்?",
         answer: "நவீன, பாதுகாப்பான தளத்தின் மூலம் உங்கள் நகை வணிகத்தை வலுப்படுத்துங்கள்.",
         featureTitle1: "தனிப்பயனாக்கப்பட்ட மொபைல் ஆப்",
-        featuresDetail1: "வாடிக்கையாளர்கள் திட்டம் விவரங்களை பார்க்கலாம், கட்டணங்களை செலுத்தலாம், அறிவிப்புகளை பெறலாம்.",
-        featureTitle2: "சுலப திட்டம் மேலாண்மை",
-        featuresDetail2: "திட்டம் கட்டணங்கள், கடைசி தேதிகள் மற்றும் வாடிக்கையாளர் விவரங்களை கண்காணிக்கலாம்.",
+        featuresDetail1: "வாடிக்கையாளர்கள் சேமிப்புத் திட்டத்தின் விவரங்களை பார்க்கலாம், கட்டணங்களை செலுத்தலாம், அறிவிப்புகளை பெறலாம்.",
+        featureTitle2: "சுலப சேமிப்புத் திட்டம் மேலாண்மை",
+        featuresDetail2: "சேமிப்புத் திட்டத்தின் கட்டணங்கள், கடைசி தேதிகள் மற்றும் வாடிக்கையாளர் விவரங்களை கண்காணிக்கலாம்.",
         featureTitle3: "பரிந்துரையிடுங்கள், வருமானம் பெறுங்கள்",
         featuresDetail3: "புதிய வாடிக்கையாளர்களை பரிந்துரைக்க வாடிக்கையாளர்களை ஊக்குவிக்கவும் மற்றும் வெற்றிகரமாக சேரும்போது பரிசுகளை வழங்கவும்.",
         featureTitle4: "காலத்திற்குள் கட்டணம் செலுத்தினால் பரிசு",
@@ -35,11 +36,11 @@ const translations = {
         featureTitle5: "உங்கள் வாடிக்கையாளர் உங்கள் கையில்",
         featuresDetail5: "உங்கள் பிராண்டட் ஆப்பின் மூலம் எப்போதும் உங்கள் வாடிக்கையாளர்களுடன் தொடர்பில் இருங்கள்.",
         featureTitle6: "பாதுகாப்பான மற்றும் நம்பகமானது",
-        featuresDetail6: "மேகத்தில் பாதுகாப்பாக சேமிக்கப்பட்ட தரவுகள் 24/7 அணுகலுடன்.",
+        featuresDetail6: "கிளவுட் பாதுகாப்பாக சேமிக்கப்பட்ட தரவுகள் 24/7 அணுகலுடன்.",
         digitalTitle: "டிஜிட்டல் ஆகுங்கள். உங்கள் வணிகத்தை வளர்த்தெடுக்குங்கள்.",
-        digitalDescription: "வாடிக்கையாளர்களுக்கு நவீன மொபைல் அனுபவத்தை வழங்குங்கள் மற்றும் உங்கள் நகை திட்டம் வணிகத்தை எளிதாகவும் பாதுகாப்பாகவும் நிர்வகிக்கவும்.",
+        digitalDescription: "வாடிக்கையாளர்களுக்கு நவீன மொபைல் அனுபவத்தை வழங்குங்கள் மற்றும் உங்கள் நகை சேமிப்புத் திட்டத்தின் வணிகத்தை எளிதாகவும் பாதுகாப்பாகவும் நிர்வகிக்கவும்.",
         demoBtnText: "டெமோவைக் பெறுங்கள்",
-        mockHeading: "உங்கள் திட்டம் வணிகம், இப்போது டிஜிட்டல் வடிவத்தில்",
+        mockHeading: "உங்கள் சேமிப்புத் திட்டத்தின் வணிகம், இப்போது டிஜிட்டல் வடிவத்தில்",
         mockDescription: "நவீன, புரிந்திரமான இடைமுகத்தை அனுபவிக்கவும்.",
         jnanaDescription: "<strong>ஞானா இன்வென்டிவ்</strong> என்பது டிஜிட்டல் புதுமையை முன்னிறுத்தும் தொழில்நுட்ப நிறுவனம். நகை வணிகங்களுக்காக SaaSGold ஐ உருவாக்கியது ஞானா இன்வென்டிவ்."
     }

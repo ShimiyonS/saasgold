@@ -4,7 +4,7 @@ const translations = {
         <p class="mb-2"><strong>Effective Date:</strong> 11-07-2025</p>
 
         <p class="mb-4">
-        SaaSGold-க்கு வரவேற்கிறோம்! இது ஞான இன்வென்டிவ் வழங்கும் ஒரு டிஜிட்டல் திட்டம் நிதி 
+        SaaSGold-க்கு வரவேற்கிறோம்! இது ஞான இன்வென்டிவ் வழங்கும் ஒரு டிஜிட்டல் சேமிப்புத் திட்டத்தின் நிதி 
 மேலாண்மை தளமாகும், இது நகை கடைகளுக்கு வெள்ளை முத்திரை(Whitelabel) தீர்வாக வழங்கப்படுகிறது. எங்கள் இணையதளம், மொபைல் பயன்பாடு அல்லது சேவைகளை அணுகுவதன் மூலம் அல்லது பயன்படுத்துவதன் மூலம்பின்வரும் விதிமுறைகள் மற்றும் நிபந்தனைகளை நீங்கள் ஒப்புக்கொள்கிறீர்கள்.
         </p>
 
@@ -12,17 +12,17 @@ const translations = {
         <ul class="mb-4">
             <li class="mb-1"><strong>“SaaSGold,” “நாங்கள்,” “எங்கள்,”</strong>  என்பது தளத்தின் உரிமையாளரும் மற்றும் வழங்குநருமான ஞான இன்வென்டிவ்-ஐக் குறிக்கிறது.</li>
             <li class="mb-1"><strong>"வாடிக்கையாளர்," "நீங்கள்"</strong> என்பது வெள்ளை முத்திரை(Whitelabel) தளத்தைப் பயன்படுத்தும் நகை வணிகத்தைக் குறிக்கிறது.</li>
-            <li><strong>"இறுதிப் பயனர்"</strong>என்பது SaaSGold அமைப்பு வழியாக உங்கள் திட்டம் திட்டங்களில் சேர்ந்த வாடிக்கையாளர்களைக் குறிக்கிறது.</li>
+            <li><strong>"இறுதிப் பயனர்"</strong>என்பது SaaSGold அமைப்பு வழியாக உங்கள் சேமிப்புத் திட்டங்களில் சேர்ந்த வாடிக்கையாளர்களைக் குறிக்கிறது.</li>
         </ul>
 
         <h5 class="mb-2">2. சேவை கண்ணோட்டம்</h5>
-        <p class="mb-4">SaaSGold டிஜிட்டல் சீட்டு நிதி மேலாண்மைக்கான சந்தா அடிப்படையிலான மென்பொருள் தளத்தை வழங்குகிறது. இதில் வாடிக்கையாளர் பதிவுகள், திட்ட கண்காணிப்பு, கட்டண நினைவூட்டல்கள், பகுப்பாய்வு மற்றும் பிராண்டட் வெள்ளை முத்திரை(Whitelabel) ஆகியவை அடங்கும்.</p>
+        <p class="mb-4">SaaSGold டிஜிட்டல் சேமிப்புத் திட்டத்தின் நிதி மேலாண்மைக்கான சந்தா அடிப்படையிலான மென்பொருள் தளத்தை வழங்குகிறது. இதில் வாடிக்கையாளர் பதிவுகள், திட்ட கண்காணிப்பு, கட்டண நினைவூட்டல்கள், பகுப்பாய்வு மற்றும் பிராண்டட் வெள்ளை முத்திரை(Whitelabel) ஆகியவை அடங்கும்.</p>
 
         <h5 class="mb-2">3. பிராண்டட் பயன்பாட்டு உரிமம்</h5>
         <p class="mb-4">சந்தா காலத்தில் உங்கள் கடையின் பிராண்டிங்கின் கீழ் தளத்தைப் பயன்படுத்த உங்களுக்கு பிரத்தியேகமற்ற, மாற்ற முடியாத, திரும்பப்பெறக்கூடிய உரிமம் வழங்கப்பட்டுள்ளது. அனைத்து தள அம்சங்களும் இடைமுகங்களும் SaaSGold-ன் உரிமையாகவே இருக்கும்.</p>
 
         <h5 class="mb-2">4. தரவு உரிமை & பயன்பாடு</h5>
-        <p class="mb-2">தளத்தில் உள்ளிடப்படும் அனைத்து தரவுகளும் (பயனர் விவரங்கள், பரிவர்த்தனை பதிவுகள், சீட்டுத் திட்டத் தகவல்கள் மற்றும் தகவல் தொடர்புகள் உட்பட மட்டும் அல்ல) SaaSGold ஆல் சேமிக்கப்பட்டு நிர்வகிக்கப்படுகின்றன.</p>
+        <p class="mb-2">தளத்தில் உள்ளிடப்படும் அனைத்து தரவுகளும் (பயனர் விவரங்கள், பரிவர்த்தனை பதிவுகள், சேமிப்புத் திட்டத் தகவல்கள் மற்றும் தகவல் தொடர்புகள் உட்பட மட்டும் அல்ல) SaaSGold ஆல் சேமிக்கப்பட்டு நிர்வகிக்கப்படுகின்றன.</p>
         <ul class="mb-4">
             <li class="mb-1">தரவு உரிமை ஞான இன்வென்டிவ் (SaaSGold) நிறுவனத்திடம் உள்ளது.</li>
             <li class="mb-1">சந்தா காலத்தில் வணிக நோக்கங்களுக்காக தங்கள் தரவை அணுகவும் நிர்வகிக்கவும் வாடிக்கையாளர்களுக்கு வரையறுக்கப்பட்ட உரிமைகள் வழங்கப்படுகின்றன.</li>
@@ -56,8 +56,8 @@ const translations = {
         <p class="mb-2">SaaSGold இதற்குப் பொறுப்பல்ல:</p>
         <ul class="mb-4">
             <li class="mb-1">தவறான தரவு உள்ளீடு அல்லது வாடிக்கையாளர் தவறான நிர்வாகத்தால் ஏற்படும் இழப்புகள்</li>
-            <li class="mb-1">திட்டம் ஃபண்ட் திட்டங்களின் நிதி விளைவுகள்</li>
-            <li>வாடிக்கையாளர் திட்டம் செயல்பாடுகளை தவறாகப் பயன்படுத்துவதால் ஏற்படும் சட்ட சிக்கல்கள்</li>
+            <li class="mb-1">சேமிப்புத் திட்டங்களின் நிதி விளைவுகள்</li>
+            <li>வாடிக்கையாளர் சேமிப்புத் திட்டத்தின் செயல்பாடுகளை தவறாகப் பயன்படுத்துவதால் ஏற்படும் சட்ட சிக்கல்கள்</li>
         </ul>
 
         <h5 class="mb-2">9. புதுப்பிப்புகள்</h5>
@@ -71,7 +71,7 @@ const translations = {
         <p class="mb-2"><strong>Effective Date:</strong> 11-07-2025</p>
 
         <p class="mb-4">
-            Welcome to <strong>SaaSGold,</strong> a digital scheme fund management platform by <strong>Jnana
+            Welcome to <strong>SaaSGold,</strong> a digital saving schemes management platform by <strong>Jnana
                 Inventive,</strong> offered to jewellery shops
             as a white-label solution. By accessing or using our website, mobile application, or services, you agree to
             the following Terms & Conditions.
@@ -83,12 +83,12 @@ const translations = {
                 of the platform.</li>
             <li class="mb-1"><strong>“Client,” “you,”</strong> refers to the jewellery business using the white-label
                 platform.</li>
-            <li><strong>“End-user”</strong> refers to the customers enrolled in your scheme schemes via the SaaSGold
+            <li><strong>“End-user”</strong> refers to the customers enrolled in your saving schemes via the SaaSGold
                 system.</li>
         </ul>
 
         <h5 class="mb-2">2. Service Overview</h5>
-        <p class="mb-4">SaaSGold provides a subscription-based software platform for digital scheme fund management. This
+        <p class="mb-4">SaaSGold provides a subscription-based software platform for digital saving schemes management. This
             includes customer records, plan tracking, payment reminders, analytics, and branded white-label interfaces.
         </p>
 
@@ -98,7 +98,7 @@ const translations = {
             intellectual property of SaaSGold.</p>
 
         <h5 class="mb-2">4. Data Ownership & Usage</h5>
-        <p class="mb-2">All data (including but not limited to user details, transaction records, scheme plan information,
+        <p class="mb-2">All data (including but not limited to user details, transaction records, saving schemes plan information,
             and communication history) entered into the platform is stored and managed by SaaSGold.</p>
         <ul class="mb-4">
             <li class="mb-1"><strong>Data ownership remains with Jnana Inventive (SaaSGold).</strong></li>
@@ -138,8 +138,8 @@ const translations = {
         <p class="mb-2">SaaSGold is not liable for:</p>
         <ul class="mb-4">
             <li class="mb-1">Losses due to incorrect data entry or client mismanagement</li>
-            <li class="mb-1">Financial outcomes of scheme fund schemes</li>
-            <li>Legal issues arising from client misuse of scheme operations</li>
+            <li class="mb-1">Financial outcomes of saving schemes</li>
+            <li>Legal issues arising from client misuse of saving schemes operations</li>
         </ul>
 
         <h5 class="mb-2">9. Updates</h5>
@@ -148,7 +148,7 @@ const translations = {
 
         <h5 class="mb-2">10. Governing Law</h5>
         <p class="mb-4">These terms are governed by the laws of India. Disputes are subject to the jurisdiction of
-            courts in<strong>Chennai, Tamil Nadu.</strong></p>`
+            courts in <strong>Chennai, Tamil Nadu.</strong></p>`
     }
 };
 
@@ -171,4 +171,3 @@ function setLang(lang) {
 // Default to English
 var langu = window.localStorage.getItem("lang")
 setLang(langu || 'en');
-
