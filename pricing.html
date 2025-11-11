@@ -207,10 +207,24 @@
             grid-column: span 8;
         }
 
+        .hero-feature-grid .feature {
+            width: 32%;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #FFE082 !important;
+            color: #9b2114;
+        }
+
         .feature {
             padding: 10px;
             border-radius: 10px;
-            border: 1px solid #000
+            background-color: #FFE082 !important;
+            color: #9b2114;
+        }
+
+        .feature div {
+            font-size: 16px;
+            line-height: 1.5;
         }
 
         table {
@@ -269,6 +283,20 @@
             }
         }
 
+        @media (max-width: 1024px) {
+            .refund-policy-container {
+                max-width: 80%;
+            }
+
+            .feature-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .feature-grid .feature {
+                font-size: 14px;
+            }
+        }
+
         /* Optional: make first column sticky */
         th:first-child,
         td:first-child {
@@ -304,15 +332,16 @@
             <p style="color:var(--muted); margin-bottom:1px">Pay Only When Your Customers Pay</p>
             <p> Our user-based pricing model ensures risk-free, affordable growth. You only pay when your customers pay.
             </p>
-            <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap; justify-content: space-between">
+            <div class="hero-feature-grid"
+                style="display:flex;gap:12px;margin-top:12px; justify-content: space-between">
                 <div class="feature"><strong>Risk-Free</strong>
-                    <div style="color:var(--muted)">Pay only when your customers pay</div>
+                    <div>Pay only when your customers pay</div>
                 </div>
                 <div class="feature"><strong>Affordable</strong>
-                    <div style="color:var(--muted)">No hidden fees, predictable costs</div>
+                    <div>No hidden fees, predictable costs</div>
                 </div>
                 <div class="feature"><strong>Growth-Focused</strong>
-                    <div style="color:var(--muted)">Scales with your business</div>
+                    <div>Scales with your business</div>
                 </div>
             </div>
         </section>
@@ -331,10 +360,10 @@
                             <th>Monthly Subscription</th>
                             <td class="numeric">₹25 per active user / month</td>
                         </tr>
-                        <tr>
+                        <!-- <tr>
                             <th>Annual Equivalent</th>
                             <td class="numeric">₹270 per user / year</td>
-                        </tr>
+                        </tr> -->
                         <tr>
                             <th>Minimum Billing</th>
                             <td class="numeric">Based on active users each month</td>
@@ -384,7 +413,7 @@
                     <li>Affordable and predictable costs</li>
                     <li>No idle user charges or hidden fees</li>
                     <li>Boosts renewals, upsells, and referrals</li>
-                    <li>Builds a strong digital brand with your own white-label app</li>
+                    <li>Builds a strong digital brand with your own customized app</li>
                     <li>Increases sales via in-app catalogue</li>
                     <li>Simplifies operations through automation and smart reminders</li>
                 </ul>
