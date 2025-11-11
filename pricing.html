@@ -42,7 +42,7 @@
             overflow-y: auto;
             /* vertical scroll */
             border: 1px solid #ccc;
-            border-radius: 20px;
+            /*border-radius: 20px;*/
             background: #fff;
             margin: 10px 0 40px;
         }
@@ -50,7 +50,6 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            min-width: 600px;
             /* ensures scroll on small screens */
         }
 
@@ -84,8 +83,166 @@
             text-decoration: none;
             color: #9b2114;
             background-color: #ffe082;
+            display: block;
+            font-size: 12px;
         }
 
+        :root {
+            --accent: #ffe082;
+            --bg: #FFF8E1;
+            --muted: #333333;
+            --card: #ffffff;
+            --radius: 14px;
+            --test: #9b2114
+        }
+
+        .scontainer {
+            border-radius: 14px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+            background: var(--card);
+        }
+
+        .hero {
+            max-width: 1200px;
+            gap: 24px;
+            align-items: center;
+            padding: 20px;
+            border-radius: 18px;
+        }
+
+        .hero-left {
+            flex: 1
+        }
+
+        .eyebrow {
+            display: inline-block;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: rgba(184, 134, 11, 0.08);
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 13px
+        }
+
+        h1 {
+            margin: 12px 0 8px;
+            font-size: 28px
+        }
+
+        p.lead {
+            color: var(--muted);
+            margin: 0 0 14px
+        }
+
+        .cta {
+            display: flex;
+            gap: 16px
+        }
+
+        .btn {
+            padding: 10px 16px;
+            border-radius: 10px;
+            border: 0;
+            cursor: pointer;
+            font-weight: 600
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--test)
+        }
+
+        .btn-ghost {
+            background: transparent;
+            border: 1px solid black
+        }
+
+        .hero-right {
+            width: 260px;
+            display: flex;
+            justify-content: center
+        }
+
+        .mockup-img {
+            width: 260px;
+            height: 580px;
+            border-radius: 20px;
+            object-fit: contain;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 18px
+        }
+
+        .card {
+            grid-column: span 4;
+            background: var(--card);
+            padding: 18px;
+            border-radius: 12px;
+        }
+
+        .wide {
+            grid-column: span 8
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px
+        }
+
+        .benefit {
+            grid-column: span 8;
+        }
+
+        .feature {
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #000
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse
+        }
+
+        table th,
+        table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #eef2f7
+        }
+
+        .numeric {
+            font-weight: 700
+        }
+
+
+        @media (max-width:900px) {
+            .grid {
+                grid-template-columns: 1fr
+            }
+
+            .card,
+            .wide {
+                grid-column: span 1
+            }
+
+            .hero {
+                flex-direction: column
+            }
+
+            .hero-right {
+                width: 100%
+            }
+
+            .mockup-img {
+                width: 200px;
+                height: 400px
+            }
+        }
 
         /* Responsive style */
         @media (max-width: 768px) {
@@ -95,15 +252,17 @@
                 padding: 10px;
                 font-size: 14px;
             }
+
+            .refund-policy-container {
+                max-width: 90%;
+                margin: 20px auto;
+            }
         }
 
         /* Optional: make first column sticky */
         th:first-child,
         td:first-child {
             background-color: #f1f1f1;
-            position: sticky;
-            left: 0;
-            z-index: 1;
         }
     </style>
 </head>
@@ -113,93 +272,122 @@
     <div id="header-placeholder"></div>
 
     <div class="refund-policy-container" id="pricing">
-        <h1 class="pricing-page-head" style="font-size: 2rem;">SaaSGold Pricing</h1>
-        <p>Accelerate your jewellery business growth with SaaSGold – the next-gen saving scheme
-            management platform crafted for modern retail. Whether you're a fast-scaling enterprise or
-            an ambitious local brand, SaaSGold empowers you with sleek, white-labeled mobile apps,
-            AI-enabled, intelligent POS systems, and powerful analytics to simplify operations, boost
-            customer trust, and scale effortlessly</p>
-        <p>Transform how you manage saving schemes, payments, and customer relationships – all from one
-            powerful, easy-to-use platform built for the digital age.</p>
+        <section class="hero" id="home">
+            <div class="hero-left">
+                <div class="eyebrow">SaaSGOLD Pricing</div>
+                <h1>SaaSGOLD Pricing – Simple. Transparent. Designed to Grow with You</h1>
+                <p class="lead">Every jewellery shop deserves its own branded app and digital savings platform.</p>
+                <div class="">
+                    <button class="btn btn-primary" onclick="bookDemo()">Book a Free Demo</button>
+                    <button class="btn btn-ghost" onclick="talkTeam()">Talk to Our Team</button>
+                </div>
+            </div>
+            <!-- <div class="hero-right">
+                <img src="assets/screens/screen2.png" class="mockup-img" alt="Screenshot 2">
+            </div> -->
+        </section>
 
-        <h2 class="pricing-page-head" style="font-size: 1.5rem;">SaaSGold Pricing Plans Overview</h2>
+        <section class="hero" id="home">
+            <h2>Why SaaSGOLD </h2>
+            <p style="color:var(--muted); margin-bottom:1px">Pay Only When Your Customers Pay</p>
+            <p> Our user-based pricing model ensures risk-free, affordable growth. You only pay when your customers pay.
+            </p>
+            <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap; justify-content: space-between">
+                <div class="feature"><strong>Risk-Free</strong>
+                    <div style="color:var(--muted)">Pay only when your customers pay</div>
+                </div>
+                <div class="feature"><strong>Affordable</strong>
+                    <div style="color:var(--muted)">No hidden fees, predictable costs</div>
+                </div>
+                <div class="feature"><strong>Growth-Focused</strong>
+                    <div style="color:var(--muted)">Scales with your business</div>
+                </div>
+            </div>
+        </section>
 
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th class="feature-cell">Feature</th>
-                        <th>Valarchi Sigaram Plan (வளர்ச்சி சிகரம்)</th>
-                        <th>Enterprise Growth Plan</th>
-                        <th>Enterprises</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="feature-cell">Setup Fee</td>
-                        <td>₹49,999 </td>
-                        <td>₹99,999 </td>
-                        <td rowspan="12" class="text-break"><a href="/contact.html" class="please-contact-btn">Contact
-                                Us</a></td>
-                    </tr>
-                    <tr>
-                        <td class="feature-cell">Monthly Subscription</td>
-                        <td>₹999/month</td>
-                        <td>₹1,999/month</td>
-                    </tr>
-                    <tr>
-                        <td class="feature-cell">Annual Subscription Discount</td>
-                        <td>10% Off</td>
-                        <td>10% Off</td>
-                    </tr>
-                    <tr>
-                        <td class="feature-cell">Customer Management</td>
-                        <td>Up to 400 Customers</td>
-                        <td>Unlimited Customers</td>
-                    </tr>
-                    <tr>
-                        <td class="feature-cell">Payment Processing</td>
-                        <td>Unlimited</td>
-                        <td>Unlimited</td>
-                    </tr>
-                    <tr>
-                        <td class="feature-cell">White-Labeled Mobile Apps</td>
-                        <td>Customer App</td>
-                        <td>Customer App Collection App Store App</td>
-                    </tr>
-                    <tr>
-                        <td class="feature-cell">POS System</td>
-                        <td>5,000 Billing Transactions, Inventory & CRM Tools</td>
-                        <td>10,000 Billing Transactions, Inventory & CRM Tools</td>
-                    </tr>
-                    <tr>
-                        <td class="feature-cell">Analytics</td>
-                        <td>AI-Powered Business Insights (limited)</td>
-                        <td>AI-Powered Business Insights</td>
-                    </tr>
-                    <tr>
-                        <td class="feature-cell">Admin Panel</td>
-                        <td>Centralized Web-Based Panel</td>
-                        <td>Centralized Web-Based Panel</td>
-                    </tr>
-                    <tr>
-                        <td class="feature-cell">User Access</td>
-                        <td>5 Users</td>
-                        <td>10 Users</td>
-                    </tr>
-                    <tr>
-                        <td class="feature-cell">Communication Tools</td>
-                        <td>WhatsApp, SMS, Email Integration</td>
-                        <td>WhatsApp, SMS, Email Integration</td>
-                    </tr>
-                    <tr>
-                        <td class="feature-cell">Customer Support</td>
-                        <td>Dedicated Support</td>
-                        <td>Priority Support</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <section class="grid hero" aria-label="pricing overview">
+            <div class="card wide">
+                <h3>Simple, Transparent Pricing</h3>
+                <p style="color:var(--muted)">One-time setup and a monthly user-based subscription.</p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>One-Time Setup Fee</th>
+                            <td class="numeric">₹25,000</td>
+                        </tr>
+                        <tr>
+                            <th>Monthly Subscription</th>
+                            <td class="numeric">₹25 per active user / month</td>
+                        </tr>
+                        <tr>
+                            <th>Annual Equivalent</th>
+                            <td class="numeric">₹270 per user / year</td>
+                        </tr>
+                        <tr>
+                            <th>Minimum Billing</th>
+                            <td class="numeric">Based on active users each month</td>
+                        </tr>
+                        <tr>
+                            <th>Ideal For</th>
+                            <td>Jewellery shops of all sizes</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4 style="margin-top:12px">Setup includes:</h4>
+                <ul style="margin:6px 0 12px 18px;color:var(--muted)">
+                    <li>Full White-Label Mobile App with your shop’s branding</li>
+                    <li>Play Store publishing and Admin Portal setup</li>
+                    <li>Personalized branding configuration</li>
+                    <li>Catalogue upload and product showcase</li>
+                    <li>Staff training and onboarding support</li>
+                    <li>End-to-end launch and deployment assistance</li>
+                </ul>
+
+                <div style="margin-top:6px;display:flex;gap:12px;align-items:center">
+                    <label for="activeUsers">Active customers (example):</label>
+                    <input id="activeUsers" type="number" min="0" value="200"
+                        style="width:110px;padding:8px;border-radius:8px;border:1px solid #e6e9ef" oninput="recalc()">
+                    <div style="margin-left:auto;font-weight:700">Monthly: <span id="monthlyAmount">₹5000</span></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Features</h3>
+                <div class="feature-grid" style="margin-top:12px">
+                    <div class="feature">Flexible Saving Schemes</div>
+                    <div class="feature">White-Label App on Play Store</div>
+                    <div class="feature">AI Investment Insights</div>
+                    <div class="feature">Smart Notifications (WhatsApp, Push, SMS)</div>
+                    <div class="feature">Rewards and Referral System</div>
+                    <div class="feature">In-App Catalogue Display</div>
+                    <div class="feature">Lowest Payment Gateway Fee (₹5–10/transaction)</div>
+                    <div class="feature">User-Based Billing</div>
+                </div>
+            </div>
+
+            <div class="card benefit">
+                <h3>Benefits</h3>
+                <ul style="margin:6px 0 0 18px;color:var(--muted)">
+                    <li>Affordable and predictable costs</li>
+                    <li>No idle user charges or hidden fees</li>
+                    <li>Boosts renewals, upsells, and referrals</li>
+                    <li>Builds a strong digital brand with your own white-label app</li>
+                    <li>Increases sales via in-app catalogue</li>
+                    <li>Simplifies operations through automation and smart reminders</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="hero" id="home" style=" margin-top:20px">
+            <h3>Ready to Launch Your Jewellery Brand App?</h3>
+            <p style="color:var(--muted)">Take your business online with SaaSGOLD and experience faster growth, higher
+                customer loyalty, and more sales.</p>
+            <div style="display:flex;gap:12px;margin-top:10px">
+                <button class="btn btn-primary" onclick="bookDemo()">Book a Free Demo</button>
+                <button class="btn btn-ghost" onclick="talkTeam()">Talk to Our Team</button>
+            </div>
+        </section>
     </div>
     <!-- footer-section -->
     <div id="placeholders-for-footer"></div>
