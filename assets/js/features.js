@@ -4,7 +4,7 @@ const translations = {
         featuresMainAnswer: "SaaSGold is more than just a <strong>saving scheme management software.</strong> it's a full-fledged <strong>jewellery store management software</strong> tailored for retail jewellers who want to streamline operations, manage saving scheme, and grow their business digitally. Whether you need a <strong>jewellery billing software, jewellery inventory software,</strong> or a <strong>POS software for jewellery stores,</strong> SaaSGold does it all.",
         keyHeading: "Key Value Propositions:",
         keyHeadingPoint1: "AI-powered features for smarter decision-making",
-        keyHeadingPoint2: "White-labeled app to reflect your brand",
+        keyHeadingPoint2: "Customized app to reflect your brand",
         keyHeadingPoint3: "Cloud-based access for multi-store control",
         keyHeadingPoint4: "Built-in CRM, loyalty, and referral systems",
         featuresHeading: "Feature Highlights",
@@ -32,7 +32,7 @@ const translations = {
         featuresSubQuestion8: "8. CRM & Customer Management",
         featuresSubAnswer8: " Maintain detailed customer profiles, KYC, history, dues, and preferences for personalized engagement.",
 
-        featuresSubQuestion9: "9. White-Labeled Customer App",
+        featuresSubQuestion9: "9. Customized Customer App",
         featuresSubAnswer9: "Offer a branded app where customers can check saving scheme details, make payments, and refer friends.",
 
         featuresSubQuestion10: "10. Loyalty, Referral & Rewards",
