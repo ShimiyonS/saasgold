@@ -7,8 +7,8 @@
     }
 
     .enquiry-toggle {
-        width: 60px;
-        height: 60px;
+        width: 55px;
+        height: 55px;
         background: linear-gradient(135deg, #791236 0%, #ffd66e 100%);
         border-radius: 50%;
         display: flex;
@@ -35,7 +35,7 @@
         background: #fff;
         box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
         transition: right 0.3s ease;
-        z-index: 1001;
+        z-index: 9999999;
         overflow-y: auto;
     }
 
@@ -150,6 +150,8 @@
 
     /* chatbot css */
     .saasgold-chat-toggle {
+        width: 55px !important;
+        height: 55px !important;
         background: linear-gradient(135deg, #791236 0%, #ffd66e 100%) !important;
     }
 
@@ -167,7 +169,7 @@
     }
 
     .saasgold-chat-widget {
-        bottom: 105px !important;
+        bottom: 100px !important;
         right: 30px !important;
     }
 
@@ -178,7 +180,7 @@
 
     @media (max-width: 768px) {
         .saasgold-chat-widget {
-            bottom: 105px !important;
+            bottom: 90px !important;
             right: 25px !important;
         }
     }

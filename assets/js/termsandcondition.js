@@ -73,7 +73,7 @@ const translations = {
         <p class="mb-4">
             Welcome to <strong>SaaSGold,</strong> a digital saving schemes management platform by <strong>Jnana
                 Inventive,</strong> offered to jewellery shops
-            as a white-label solution. By accessing or using our website, mobile application, or services, you agree to
+            as a customized solution. By accessing or using our website, mobile application, or services, you agree to
             the following Terms & Conditions.
         </p>
 
@@ -81,7 +81,7 @@ const translations = {
         <ul class="mb-4">
             <li class="mb-1"><strong>“SaaSGold,” “we,” “our,”</strong> refers to Jnana Inventive, the owner and provider
                 of the platform.</li>
-            <li class="mb-1"><strong>“Client,” “you,”</strong> refers to the jewellery business using the white-label
+            <li class="mb-1"><strong>“Client,” “you,”</strong> refers to the jewellery business using the customized
                 platform.</li>
             <li><strong>“End-user”</strong> refers to the customers enrolled in your saving schemes via the SaaSGold
                 system.</li>
@@ -89,7 +89,7 @@ const translations = {
 
         <h5 class="mb-2">2. Service Overview</h5>
         <p class="mb-4">SaaSGold provides a subscription-based software platform for digital saving schemes management. This
-            includes customer records, plan tracking, payment reminders, analytics, and branded white-label interfaces.
+            includes customer records, plan tracking, payment reminders, analytics, and branded customized interfaces.
         </p>
 
         <h5 class="mb-2">3. Branded Use License</h5>
