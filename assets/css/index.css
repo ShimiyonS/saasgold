@@ -24,21 +24,21 @@
     }
 
     /* this code for image in the hero banner section for video */
-    /* .hero-video-wrapper {
+    .hero-video-wrapper {
       position: relative;
       width: 100%;
       aspect-ratio: 16/9;
-      max-height: 720px;
+      max-height: 680px;
       min-height: 220px;
       overflow: hidden;
-    } */
+    }
 
-
+  
     /* this code for image in the hero banner section for image*/
-    .hero-video-wrapper {
+    /* .hero-video-wrapper {
       width: 100%;
       overflow: hidden;
-    }
+    } */
 
     .hero-img {
       display: block;
@@ -53,7 +53,7 @@
     }
 
     /* this code for image in the hero banner section */
-    /* @media (max-width: 991px) {
+    @media (max-width: 991px) {
       .hero-video-wrapper {
         aspect-ratio: 16/9;
         min-height: 180px;
@@ -77,7 +77,7 @@
         aspect-ratio: 16/9;
         min-height: 80px;
       }
-    } */
+    }
 
 
 
