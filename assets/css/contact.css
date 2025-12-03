@@ -48,6 +48,8 @@
        border: 1px solid #ddd;
        border-radius: 8px;
        background: #fff;
+       height: auto;
+       min-height: fit-content;
    }
 
    .btn-submit {
@@ -82,4 +84,167 @@
    input:-webkit-autofill:focus {
        -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
        box-shadow: 0 0 0px 1000px #fff inset !important;
+   }
+
+   .contact-container {
+       margin-top: 50px;
+       margin-left: 50px;
+       margin-right: 50px;
+       width: calc(100% - 100px);
+       display: flex;
+       flex-wrap: wrap;
+       align-items: stretch;
+   }
+
+   .contact-image {
+       width: 50%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       min-height: 500px;
+   }
+
+   .contact-image img {
+       width: 100%;
+       height: auto;
+       max-height: 600px;
+       object-fit: contain;
+       border-radius: 8px;
+   }
+
+   .contact-form {
+       width: 50%;
+       padding-left: 20px;
+       display: flex;
+       align-items: flex-start;
+   }
+
+   .contact-form form {
+       width: 100%;
+       height: auto;
+   }
+
+   .contact-form form input {
+       width: 100%;
+   }
+
+   /* Responsive Design */
+   @media (max-width: 991.98px) {
+       .contact-container {
+           margin-top: 30px;
+           margin-left: 15px;
+           margin-right: 15px;
+           width: calc(100% - 30px);
+           flex-direction: column;
+           align-items: stretch;
+       }
+
+       .contact-image {
+           width: 100%;
+           min-height: auto;
+           margin-bottom: 20px;
+       }
+
+       .contact-image img {
+           height: auto;
+           max-height: 40vh;
+           min-height: 250px;
+           object-fit: contain;
+       }
+
+       .contact-form {
+           width: 100%;
+           padding-left: 0;
+       }
+
+       .form-container {
+           margin: 20px auto;
+           padding: 20px;
+       }
+   }
+
+   @media (max-width: 767.98px) {
+       .contact-container {
+           margin-top: 20px;
+           margin-left: 10px;
+           margin-right: 10px;
+           width: calc(100% - 20px);
+       }
+
+       .contact-image img {
+           max-height: 35vh;
+           min-height: 200px;
+       }
+
+       .form-container {
+           margin: 15px auto;
+           padding: 15px;
+       }
+
+       .input-container {
+           margin-top: 15px;
+       }
+
+       .input-container input,
+       .input-container textarea {
+           padding: 12px;
+           font-size: 14px;
+       }
+
+       .input-container label {
+           font-size: 14px;
+       }
+
+       .btn-submit {
+           font-size: 1rem;
+           padding: 12px 24px;
+       }
+   }
+
+   @media (max-width: 575.98px) {
+       body {
+           padding-top: 60px;
+       }
+
+       .contact-container {
+           margin-top: 15px;
+           margin-left: 5px;
+           margin-right: 5px;
+           width: calc(100% - 10px);
+       }
+
+       .contact-image img {
+           max-height: 30vh;
+           min-height: 180px;
+       }
+
+       .form-container {
+           margin: 10px auto;
+           padding: 15px;
+           border-radius: 6px;
+       }
+
+       .input-container input,
+       .input-container textarea {
+           padding: 10px;
+           font-size: 14px;
+       }
+   }
+
+   /* Handle zoom levels and different display sizes */
+   @media (min-width: 992px) {
+       .contact-image {
+           min-height: 500px;
+       }
+
+       .contact-image img {
+           max-height: 600px;
+       }
+   }
+
+   /* Ensure form doesn't exceed viewport */
+   @media (min-width: 1200px) {
+       .contact-image img {
+           max-height: 700px;
+       }
    }
